@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313170542) do
+ActiveRecord::Schema.define(version: 20170313175657) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -56,8 +56,28 @@ ActiveRecord::Schema.define(version: 20170313170542) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "name"
+    t.string   "address"
+    t.string   "zip_code"
+    t.string   "city"
+    t.integer  "time_slot"
+    t.integer  "monday_meal_id"
+    t.integer  "monday_meal_count"
+    t.integer  "tuesday_meal_id"
+    t.integer  "tuesday_meal_count"
+    t.integer  "wednesday_meal_id"
+    t.integer  "wednesday_meal_count"
+    t.integer  "thursday_meal_id"
+    t.integer  "thursday_meal_count"
+    t.integer  "friday_meal_id"
+    t.integer  "friday_meal_count"
     t.index ["email"], name: "index_restaurants_on_email", unique: true, using: :btree
+    t.index ["friday_meal_id"], name: "index_restaurants_on_friday_meal_id", using: :btree
+    t.index ["monday_meal_id"], name: "index_restaurants_on_monday_meal_id", using: :btree
     t.index ["reset_password_token"], name: "index_restaurants_on_reset_password_token", unique: true, using: :btree
+    t.index ["thursday_meal_id"], name: "index_restaurants_on_thursday_meal_id", using: :btree
+    t.index ["tuesday_meal_id"], name: "index_restaurants_on_tuesday_meal_id", using: :btree
+    t.index ["wednesday_meal_id"], name: "index_restaurants_on_wednesday_meal_id", using: :btree
   end
 
   create_table "subscriptions", force: :cascade do |t|
@@ -108,7 +128,7 @@ ActiveRecord::Schema.define(version: 20170313170542) do
     t.string   "address"
     t.string   "zip_code"
     t.string   "city"
-    t.integer  "phone_number"
+    t.string   "phone_number"
     t.integer  "time_slot"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
@@ -118,6 +138,11 @@ ActiveRecord::Schema.define(version: 20170313170542) do
   add_foreign_key "meals", "restaurants"
   add_foreign_key "orders", "meals"
   add_foreign_key "orders", "users"
+  add_foreign_key "restaurants", "meals", column: "friday_meal_id"
+  add_foreign_key "restaurants", "meals", column: "monday_meal_id"
+  add_foreign_key "restaurants", "meals", column: "thursday_meal_id"
+  add_foreign_key "restaurants", "meals", column: "tuesday_meal_id"
+  add_foreign_key "restaurants", "meals", column: "wednesday_meal_id"
   add_foreign_key "user_food_preferences", "categories"
   add_foreign_key "user_food_preferences", "users"
   add_foreign_key "user_subscriptions", "subscriptions"
