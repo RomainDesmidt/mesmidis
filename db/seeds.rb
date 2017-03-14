@@ -40,13 +40,15 @@ puts "Creating restaurants and their meals..."
 lecomptoir = Restaurant.create!(
   name: "Le Comptoir", email: "contact@lecomptoir.com", time_slot: "12",
   address: "31 rue Fouré", zip_code: "44000", city: "Nantes",
-  password: "123456", password_confirmation: "123456"
+  password: "123456", password_confirmation: "123456",
+  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_comptoir.jpg"))
 )
 
 lecomptoir_couscous = Meal.create!(
   restaurant: lecomptoir,
   category: Category.find_by_name!("Marocain"),
-  name: "Couscous"
+  name: "Couscous",
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_couscous.jpg"))
 )
 
 lecomptoir_crevettes_sichuan = Meal.create!(
