@@ -4,6 +4,8 @@ class Restaurant < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  mount_uploader :picture, PictureUploader
+
   has_many :meals
 
   belongs_to :monday_meal, class_name: "Meal", optional: true
