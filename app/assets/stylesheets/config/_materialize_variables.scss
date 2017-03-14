@@ -1,0 +1,26 @@
+/* -------------------------------------
+ * Materialize sass variables
+ * (see https://github.com/mkhairi/materialize-sass/blob/master/app/assets/stylesheets/materialize/components/_variables.scss)
+ * ------------------------------------- */
+
+// General style
+// ...
+
+// Semantic color scheme
+$primary-color: $brand-color !default;
+$secondary-color: $brand-second-color !default;
+
+// 13. Navigation Bar
+// ==========================================================================
+
+$navbar-height: 80px !default;
+$navbar-line-height: $navbar-height !default;
+$navbar-height-mobile: 56px !default;
+$navbar-line-height-mobile: $navbar-height-mobile !default;
+$navbar-font-size: 1rem !default;
+$navbar-font-color: $brand-color !default;
+$navbar-brand-font-size: 2.1rem !default;
+// Buttons / inputs radius
+// ...
+
+// ETC.

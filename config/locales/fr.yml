@@ -1,0 +1,18 @@
+fr:
+  activerecord:
+    models:
+      meal: Repas
+      user: Client
+      category: Catégorie
+      order: Commande
+    attributes:
+      meal:
+        name: Nom
+        category: Catégorie
+        picture: Photo
+      restaurant:
+        name: Nom
+        address: Adresse
+        city: Ville
+        zip_code: Code Postal
+

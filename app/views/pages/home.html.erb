@@ -1,5 +1,16 @@
 <h1>Pages#home</h1>
 <p>Find me in app/views/pages/home.html.erb</p>
 <%= current_restaurant %>
-<%= cl_image_tag("odpiz8vfsf4wg0h5cfuv.jpg",
-      width: 400, height: 300, crop: :fill) %>
+
+<a class="waves-effect waves-light btn">button</a>
+
+<blockquote>
+  This is an example quotation that uses the blockquote tag.
+</blockquote>
+
+<%= simple_form_for Meal.new do |f| %>
+  <%= f.input :name %>
+  <%= f.association :category, as: :select %>
+  <%= f.input :picture %>
+  <%= f.button :submit, "Ajouter ce repas" %>
+<% end %>
