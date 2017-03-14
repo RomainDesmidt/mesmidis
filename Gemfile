@@ -3,6 +3,7 @@ ruby '2.3.3'
 
 # default
 gem 'rails', '5.0.2'
+gem 'rails-i18n'
 gem 'puma'
 gem 'pg'
 gem 'figaro'
@@ -11,8 +12,9 @@ gem 'redis'
 
 # add by us
 gem 'devise'
+gem 'devise-i18n'
 gem 'cloudinary'
-gem 'carrierwave',  '~> 0.11.2'
+gem 'carrierwave', '~> 0.11.2'
 
 # assets
 gem 'sass-rails'
