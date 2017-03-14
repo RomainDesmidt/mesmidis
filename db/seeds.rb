@@ -71,70 +71,70 @@ lecomptoir.update!(
 
 ##################################################
 
-leplanb = Restaurant.create!(
-  name: "Le plan B", email: "contact@leplanb.com", time_slot: "12",
+la500 = Restaurant.create!(
+  name: "La 500", email: "contact@la500.com", time_slot: "12",
   address: "28 rue Fouré", zip_code: "44000", city: "Nantes",
   password: "123456", password_confirmation: "123456"
 )
 
-leplanb_quiche_lorraine = Meal.create!(
-  restaurant: leplanb,
+la500_quiche_lorraine = Meal.create!(
+  restaurant: la500,
   category: Category.find_by_name!("Français"),
   name: "Quiche Lorraine"
 )
 
-leplanb_lasagne = Meal.create!(
-  restaurant: leplanb,
+la500_lasagne = Meal.create!(
+  restaurant: la500,
   category: Category.find_by_name!("Italien"),
   name: "Lasagne"
 )
 
-leplanb_spaghettis_bolognaise = Meal.create!(
-  restaurant: leplanb,
+la500_spaghettis_bolognaise = Meal.create!(
+  restaurant: la500,
   category: Category.find_by_name!("Italien"),
   name: "Spaghettis bolognaise "
 )
 
-leplanb.update!(
-  monday_meal: leplanb_Spaghettis_bolognaise, monday_meal_count: 10,
-  tuesday_meal: leplanb_lasagne, tuesday_meal_count: 10,
-  wednesday_meal: leplanb_quiche_lorraine, wednesday_meal_count: 12,
-  thursday_meal: leplanb_Spaghettis_bolognaise, thursday_meal_count: 10,
-  friday_meal: leplanb_lasagne, friday_meal_count: 8
+la500.update!(
+  monday_meal: la500_Spaghettis_bolognaise, monday_meal_count: 10,
+  tuesday_meal: la500_lasagne, tuesday_meal_count: 10,
+  wednesday_meal: la500_quiche_lorraine, wednesday_meal_count: 12,
+  thursday_meal: la500_Spaghettis_bolognaise, thursday_meal_count: 10,
+  friday_meal: la500_lasagne, friday_meal_count: 8
 
 
 ##################################################
 
-lestontons = Restaurant.create!(
-  name: "Les Tontons", email: "contact@lestontons.com", time_slot: "12",
+lecoufourre = Restaurant.create!(
+  name: "Le Cou Fourré", email: "contact@lecoufourre.com", time_slot: "12",
   address: "10 rue de l'église", zip_code: "44100", city: "Nantes",
   password: "123456", password_confirmation: "123456"
 )
 
-lestontons_hachis_parmentier = Meal.create!(
-  restaurant: lestontons,
+lecoufourre_hachis_parmentier = Meal.create!(
+  restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
   name: "Hachis parmentier"
 )
 
-lestontons_andouillette_pommes_de_terre = Meal.create!(
-  restaurant: lestontons,
+lecoufourre_andouillette_pommes_de_terre = Meal.create!(
+  restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
   name: "Andouillette Pommes de terre"
 )
 
-lestontons_salade_saumon_tomates = Meal.create!(
-  restaurant: lestontons,
+lecoufourre_salade_saumon_tomates = Meal.create!(
+  restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
   name: "Salade au Saumon et tomates "
 )
 
-lestontons_Spaghettis_bolognaise.update!(
-  monday_meal: lestontons_hachis_parmentier, monday_meal_count: 20,
-  tuesday_meal: lestontons_hachis_parmentier, tuesday_meal_count: 10,
-  wednesday_meal: lestontons_salade_saumon_tomates, wednesday_meal_count: 20,
-  thursday_meal: lestontons_andouillette_pommes_de_terre, thursday_meal_count: 15,
-  friday_meal: lestontons_salade_saumon_tomates, friday_meal_count: 8
+lecoufourre_Spaghettis_bolognaise.update!(
+  monday_meal: lecoufourre_hachis_parmentier, monday_meal_count: 20,
+  tuesday_meal: lecoufourre_hachis_parmentier, tuesday_meal_count: 10,
+  wednesday_meal: lecoufourre_salade_saumon_tomates, wednesday_meal_count: 20,
+  thursday_meal: lecoufourre_andouillette_pommes_de_terre, thursday_meal_count: 15,
+  friday_meal: lecoufourre_salade_saumon_tomates, friday_meal_count: 8
 
 
 ##################################################
