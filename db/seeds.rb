@@ -55,12 +55,14 @@ lecomptoir_crevettes_sichuan = Meal.create!(
   restaurant: lecomptoir,
   category: Category.find_by_name!("Asiatique"),
   name: "Crevettes Sichuan"
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_crevettes_sichuan.jpg"))
 )
 
 lecomptoir_pave_de_saumon = Meal.create!(
   restaurant: lecomptoir,
   category: Category.find_by_name!("Français"),
   name: "Pavé de Saumon"
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_pave_de_saumon.jpg"))
 )
 
 lecomptoir.update!(
@@ -77,31 +79,35 @@ la500 = Restaurant.create!(
   name: "La 500", email: "contact@la500.com", time_slot: "12",
   address: "28 rue Fouré", zip_code: "44000", city: "Nantes",
   password: "123456", password_confirmation: "123456"
+  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/la_500.jpg"))
 )
 
 la500_quiche_lorraine = Meal.create!(
   restaurant: la500,
   category: Category.find_by_name!("Français"),
   name: "Quiche Lorraine"
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/la500_quiche_lorraine.jpg"))
 )
 
 la500_lasagne = Meal.create!(
   restaurant: la500,
   category: Category.find_by_name!("Italien"),
   name: "Lasagne"
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/la500_lasagne.jpg"))
 )
 
 la500_spaghettis_bolognaise = Meal.create!(
   restaurant: la500,
   category: Category.find_by_name!("Italien"),
   name: "Spaghettis bolognaise "
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/la500_spaghettis_bolognaise.jpg"))
 )
 
 la500.update!(
-  monday_meal: la500_Spaghettis_bolognaise, monday_meal_count: 10,
+  monday_meal: la500_spaghettis_bolognaise, monday_meal_count: 10,
   tuesday_meal: la500_lasagne, tuesday_meal_count: 10,
   wednesday_meal: la500_quiche_lorraine, wednesday_meal_count: 12,
-  thursday_meal: la500_Spaghettis_bolognaise, thursday_meal_count: 10,
+  thursday_meal: la500_spaghettis_bolognaise, thursday_meal_count: 10,
   friday_meal: la500_lasagne, friday_meal_count: 8
 
 
@@ -111,24 +117,28 @@ lecoufourre = Restaurant.create!(
   name: "Le Cou Fourré", email: "contact@lecoufourre.com", time_slot: "12",
   address: "10 rue de l'église", zip_code: "44100", city: "Nantes",
   password: "123456", password_confirmation: "123456"
+  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_cou_fourre.jpg"))
 )
 
 lecoufourre_hachis_parmentier = Meal.create!(
   restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
   name: "Hachis parmentier"
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecoufourre_hachis_parmentier.jpg"))
 )
 
 lecoufourre_andouillette_pommes_de_terre = Meal.create!(
   restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
   name: "Andouillette Pommes de terre"
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecoufourre_andouillette_pommes_de_terre.jpg"))
 )
 
 lecoufourre_salade_saumon_tomates = Meal.create!(
   restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
   name: "Salade au Saumon et tomates "
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecoufourre_salade_saumon_tomates.jpg"))
 )
 
 lecoufourre_Spaghettis_bolognaise.update!(
