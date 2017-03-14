@@ -1,15 +1,16 @@
 // Graphical variables
+@import "materialize/components/color";
 @import "config/variables";
-@import "config/bootstrap_variables";
+@import "config/materialize_variables";
 
 // External libraries
-@import "bootstrap-sprockets";
-@import "bootstrap";
+@import "materialize";
 @import "font-awesome-sprockets";
 @import "font-awesome";
+@import "material_icons";
 
 // Your CSS
+@import "vendor/index";
 @import "layout/index";
 @import "components/index";
 @import "pages/index";
-@import "vendor/index";
