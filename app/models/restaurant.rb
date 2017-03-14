@@ -4,11 +4,13 @@ class Restaurant < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
-  has_many :meals
+  mount_uploader :picture, PictureUploader
 
-  belongs_to :monday_meal, class_name: "Meal", optional: true
-  belongs_to :tuesday_meal, class_name: "Meal", optional: true
-  belongs_to :wednesday_meal, class_name: "Meal", optional: true
-  belongs_to :thursday_meal, class_name: "Meal", optional: true
-  belongs_to :friday_meal, class_name: "Meal", optional: true
+  has_many :meals, dependent: :destroy
+
+  belongs_to :monday_meal,    class_name: 'Meal', optional: true
+  belongs_to :tuesday_meal,   class_name: 'Meal', optional: true
+  belongs_to :wednesday_meal, class_name: 'Meal', optional: true
+  belongs_to :thursday_meal,  class_name: 'Meal', optional: true
+  belongs_to :friday_meal,    class_name: 'Meal', optional: true
 end

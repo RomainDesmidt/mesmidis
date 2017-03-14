@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170313175657) do
+ActiveRecord::Schema.define(version: 20170314142214) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -71,6 +71,7 @@ ActiveRecord::Schema.define(version: 20170313175657) do
     t.integer  "thursday_meal_count"
     t.integer  "friday_meal_id"
     t.integer  "friday_meal_count"
+    t.string   "picture"
     t.index ["email"], name: "index_restaurants_on_email", unique: true, using: :btree
     t.index ["friday_meal_id"], name: "index_restaurants_on_friday_meal_id", using: :btree
     t.index ["monday_meal_id"], name: "index_restaurants_on_monday_meal_id", using: :btree
@@ -138,11 +139,11 @@ ActiveRecord::Schema.define(version: 20170313175657) do
   add_foreign_key "meals", "restaurants"
   add_foreign_key "orders", "meals"
   add_foreign_key "orders", "users"
-  add_foreign_key "restaurants", "meals", column: "friday_meal_id"
-  add_foreign_key "restaurants", "meals", column: "monday_meal_id"
-  add_foreign_key "restaurants", "meals", column: "thursday_meal_id"
-  add_foreign_key "restaurants", "meals", column: "tuesday_meal_id"
-  add_foreign_key "restaurants", "meals", column: "wednesday_meal_id"
+  add_foreign_key "restaurants", "meals", column: "friday_meal_id", on_delete: :nullify
+  add_foreign_key "restaurants", "meals", column: "monday_meal_id", on_delete: :nullify
+  add_foreign_key "restaurants", "meals", column: "thursday_meal_id", on_delete: :nullify
+  add_foreign_key "restaurants", "meals", column: "tuesday_meal_id", on_delete: :nullify
+  add_foreign_key "restaurants", "meals", column: "wednesday_meal_id", on_delete: :nullify
   add_foreign_key "user_food_preferences", "categories"
   add_foreign_key "user_food_preferences", "users"
   add_foreign_key "user_subscriptions", "subscriptions"
