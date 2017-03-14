@@ -7,3 +7,10 @@
 <blockquote>
   This is an example quotation that uses the blockquote tag.
 </blockquote>
+
+<%= simple_form_for Meal.new do |f| %>
+  <%= f.input :name %>
+  <%= f.association :category, as: :select %>
+  <%= f.input :picture %>
+  <%= f.button :submit, "Ajouter ce repas" %>
+<% end %>
