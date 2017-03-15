@@ -2,9 +2,9 @@
 <ul id="dropdown1" class="dropdown-content">
   <li><%= link_to "Mon plat du jour", meals_path %></li>
   <li><%= link_to "Mon profil", edit_profile_path %></li>
-  <li class="divider"></li>
   <li><a href="#!">Abonnement</a></li>
-  <li><%= link_to "Déconnexion", destroy_user_session_path %></li>
+  <li class="divider"></li>
+  <li><%= link_to "Déconnexion", destroy_user_session_path, method: :DELETE %></li>
 </ul>
 <div class="navbar-fixed">
 <nav>
