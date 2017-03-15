@@ -1,59 +1,73 @@
 <div class="wrapper">
-  <h1>Mon Profil</h1>
-  <div class="container">
-    <div class="card_coordonnees">
-      <h4>Mes Coordonnées</h4>
-      <div class="row">
-        <div class="col s7">
-          <%= simple_form_for @user, url: profile_path do |f| %>
+  <h2 class="center-align">Mon Profil</h2>
+  <div class="container" >
+    <div class= "row">
+      <div class="offset-s2 col s8 offset-s2" >
+        <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+          <div class="card_coordonnees">
+            <h5>Mes Coordonnées</h5>
             <div class="row">
-              <div class="input-field col s6">
-                <%=f.input :first_name %>
-              </div>
-              <div class="input-field col s6">
-                <%=f.input :last_name %>
+              <div class="col s12 center-align">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <%=f.input :first_name %>
+                  </div>
+                  <div class="input-field col s6">
+                    <%=f.input :last_name %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <%=f.input :phone_number, input_html: { "data-length" => 12 } %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <%=f.input :address %>
+                  </div>
+                </div>
               </div>
             </div>
+          </div>
+          <div class="card_preferences">
+            <h4>Mes Préférences</h4>
             <div class="row">
-              <div class="input-field col s12">
-                <%=f.input :phone_number, input_html: { "data-length" => 12 } %>
+              <div class="col s12 center-align">
+                <div class="row">
+                  <div class="input-field col s6">
+                    <%=f.input :first_name %>
+                  </div>
+                  <div class="input-field col s6">
+                    <%=f.input :last_name %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <%=f.input :phone_number, input_html: { "data-length" => 12 } %>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <%=f.input :address %>
+                  </div>
+                </div>
+
+                <div class="card_food_preferences">
+                 <div class="row">
+                   <div class="col s7">
+                      <div class="valign-preferences">
+                        <%= f.association :favorite_categories, as: :check_boxes %>
+                      </div>
+                   </div>
+                 </div>
+                </div>
+                <!-- <i class="material-icons right">send</i> -->
               </div>
             </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <%=f.input :address %>
-              </div>
-            </div>
-        </div>
+          </div>
+          <%= f.button :submit %>
+        <%end%>
       </div>
     </div>
-    <div class="card_preferences">
-      <h4>Mes Préférences</h4>
-      <div class="row">
-        <div class="col s7">
-            <div class="row">
-              <div class="input-field col s6">
-                <%=f.input :first_name %>
-              </div>
-              <div class="input-field col s6">
-                <%=f.input :last_name %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <%=f.input :phone_number, input_html: { "data-length" => 12 } %>
-              </div>
-            </div>
-            <div class="row">
-              <div class="input-field col s12">
-                <%=f.input :address %>
-              </div>
-            </div>
-            <%=f.button :submit%>
-              <i class="material-icons right">send</i>
-            </div>
-            </div>
-            <% end %>
-        </div>
-      </div>
-    </div>
+  </div>
+</div>
