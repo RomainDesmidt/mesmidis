@@ -14,6 +14,8 @@ class ProfilesController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :phone_number, :address, favorite_category_ids: [])
+    permitted_params = params.require(:user).permit(:first_name, :last_name, :phone_number, :address, :time_slot, favorite_category_ids: [])
+    permitted_params[:time_slot] = permitted_params[:time_slot].to_i
+    permitted_params
   end
 end
