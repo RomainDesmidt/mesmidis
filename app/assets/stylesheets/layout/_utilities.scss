@@ -15,16 +15,19 @@ h1 {
   font-weight: 600;
 }
 
+// form registration
+.login-form {
+    width: 280px;
+}
+
 .wrapper {
   background-color: $cream;
   padding: 0;
   margin: 0;
 }
 
-// form registration
-.login-form {
-    width: 280px;
-}
+
+
 // Paddings
 .padded {
   padding-top: 5em;

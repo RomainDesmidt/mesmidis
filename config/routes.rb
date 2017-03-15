@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  get 'guideline', to: "pages#guideline"
+  # get 'guideline', to: "pages#guideline"
   devise_for :restaurants
   devise_for :users
 

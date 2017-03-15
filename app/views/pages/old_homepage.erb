@@ -1,0 +1,33 @@
+<div class="row header">
+      <div class="col s5 left-div">
+      <div class="center-align left-div-top">
+        <h4>MANGER <strong>LOCAL</strong></h4>
+<h4>POUR <strong>PAS CHER</strong></h4>
+<h4>CHAQUE <strong>MIDI</strong></h4>
+      </div>
+
+      </div>
+      <div class="col s1 middle"></div>
+      <div class="col s6 right-div-top" style="background-image: url(<%= image_path("homepage_top.jpg") %>)";
+"><div class="right-div"> </div></div>
+    </div>
+
+
+
+
+
+<p>Find me in app/views/pages/home.html.erb</p>
+<%= current_restaurant %>
+
+<a class="waves-effect waves-light btn">button</a>
+
+<blockquote>
+  This is an example quotation that uses the blockquote tag.
+</blockquote>
+
+<%= simple_form_for Meal.new do |f| %>
+  <%= f.input :name %>
+  <%= f.association :category, as: :select %>
+  <%= f.input :picture %>
+  <%= f.button :submit, "Ajouter ce repas" %>
+<% end %>
