@@ -4,6 +4,30 @@
  * Feel free to change them and create your own
  * ------------------------------------- */
 
+html {
+    font-family: $base-font;
+    background-color: $cream;
+  }
+
+h1 {
+  font-family: "proxima-nova",sans-serif;
+  font-style: normal;
+  font-weight: 600;
+}
+
+// form registration
+.login-form {
+    width: 280px;
+}
+
+.wrapper {
+  background-color: $cream;
+  padding: 0;
+  margin: 0;
+}
+
+
+
 // Paddings
 .padded {
   padding-top: 5em;
@@ -23,3 +47,4 @@
 .bg-dark-blue {
   background: #3b5998;
 }
+

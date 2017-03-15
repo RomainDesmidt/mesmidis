@@ -1,16 +1,7 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= current_restaurant %>
+<div class="banner" style="background: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url(<%= image_path("homepage_top.jpg") %>);">
+      <div class="banner-content">
+        <h1>Bienvenue sur MES MIDIS</h1>
+        <H2>Oups la cuisine est fermé, à demain midi .</H2>
 
-<a class="waves-effect waves-light btn">button</a>
-
-<blockquote>
-  This is an example quotation that uses the blockquote tag.
-</blockquote>
-
-<%= simple_form_for Meal.new do |f| %>
-  <%= f.input :name %>
-  <%= f.association :category, as: :select %>
-  <%= f.input :picture %>
-  <%= f.button :submit, "Ajouter ce repas" %>
-<% end %>
+      </div>
+    </div>
