@@ -15,4 +15,10 @@ fr:
         address: Adresse
         city: Ville
         zip_code: Code Postal
-
+      user:
+        first_name: Prénom
+        last_name: Nom
+        address: Adresse
+        city: Ville
+        zip_code: Code Postal
+        phone_number: Numéro de téléphone
