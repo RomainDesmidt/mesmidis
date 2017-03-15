@@ -1,18 +1,23 @@
 <!-- Dropdown Structure -->
 <ul id="dropdown1" class="dropdown-content">
-  <li><a href="#!">one</a></li>
-  <li><a href="#!">two</a></li>
+  <li><%= link_to "Mon plat du jour", meals_path %></li>
+  <li><a href="#!">Mon profil</a></li>
   <li class="divider"></li>
-  <li><a href="#!">three</a></li>
+  <li><a href="#!">Mon abonnement</a></li>
 </ul>
+<div class="navbar-fixed">
 <nav>
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo"><%= image_tag "logo.png" %></a>
+    <a href="#!" class="brand-logo center"><%= image_tag "logo.png" %></a>
     <ul class="right hide-on-med-and-down">
-      <li><a href="sass.html">Sass</a></li>
-      <li><a href="badges.html">Components</a></li>
+
       <!-- Dropdown Trigger -->
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Dropdown<i class="material-icons right">arrow_drop_down</i></a></li>
+      <% if user_signed_in? %>
+      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Mon compte<i class="material-icons right">arrow_drop_down</i></a></li>
+      <% else %>
+      <li><%= link_to "DEMANDER UNE INVITATION", new_user_registration_path, class: "waves-effect waves-light btn" %></li>
+      <% end %>
     </ul>
   </div>
 </nav>
+</div>

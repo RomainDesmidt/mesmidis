@@ -10,10 +10,16 @@
 $primary-color: $brand-color !default;
 $secondary-color: $brand-second-color !default;
 
+// 9. Fonts
+// ==========================================================================
+
+//$roboto-font-path: "roboto/" !default;
+
+
 // 13. Navigation Bar
 // ==========================================================================
 
-$navbar-height: 80px !default;
+$navbar-height: 50px !default;
 $navbar-line-height: $navbar-height !default;
 $navbar-height-mobile: 56px !default;
 $navbar-line-height-mobile: $navbar-height-mobile !default;
