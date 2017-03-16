@@ -11,6 +11,14 @@
               <input id="city" type="text" class="validate" placeholder="<%= current_user.address %> <%= current_user.city %>">
               <label class="active" for="city">adresse du pickup</label>
             </div>
+            <div class="input-field col s12">
+              <ul class="collapsible popout" data-collapsible="accordion">
+              <li>
+      <div class="collapsible-header">Plus de filtres</div>
+      <div class="collapsible-body"><span>Lorem ipsum dolor sit amet.</span></div>
+    </li>
+    </ul>
+    </div>
           </div>
         </form>
       </div>
@@ -91,11 +99,11 @@
       map: map,
       title:"You are here!"
       });
+      $(document).ready(function(){
+    $('.collapsible').collapsible();
+  });
       </script>
-      <% content_for(:after_js) do %>
-      <!-- Including Bootstrap JS (with its jQuery dependency) so that dynamic components work -->
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-      <% end %>
+
     </div>
   </div>
 </div>
