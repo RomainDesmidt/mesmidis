@@ -1,11 +1,24 @@
 nav {
   //background-color: $cream;
+  // padding-top: 15px;
+
+
+}
+nav, nav .nav-wrapper i, nav a.button-collapse, nav a.button-collapse i {
+// height: 60px;
+// line-height: 60px;
+}
+#logo {
+  height: 25px;
+  margin-top: 17px;
+  margin-left: 50px;
+
 }
 
-
-nav .brand-logo img {
-
-  height: 25px;
+#logo_notifications{
+  height: 30px;
+  margin-top: 15px;
+  margin-right: 25px;
 }
 
 .btn-navbar {

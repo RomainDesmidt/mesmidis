@@ -7,18 +7,24 @@
     <title>MES MIDIS</title>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
     <script src="https://use.typekit.net/gcr8wpv.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
 
   <body>
+  <header>
   <%= render 'shared/navbar' %>
+  </header>
   <%= render 'shared/flashes' %>
-  <div class="wrapper">
+  <main>
+  <div class="wrapper ">
     <%= yield %>
   </div>
+  </main>
     <%= javascript_include_tag 'application' %>
     <%= yield(:after_js) %>
+    <%= render 'shared/footer' %>
   </body>
 </html>

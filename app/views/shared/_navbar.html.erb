@@ -1,24 +1,28 @@
 <!-- Dropdown Structure -->
-<ul id="dropdown1" class="dropdown-content">
-  <li><%= link_to "Mon plat du jour", meals_path %></li>
-  <li><%= link_to "Mon profil", edit_profile_path %></li>
-  <li><a href="#!">Abonnement</a></li>
-  <li class="divider"></li>
-  <li><%= link_to "Déconnexion", destroy_user_session_path, method: :DELETE %></li>
-</ul>
-<div class="navbar-fixed">
-<nav>
-  <div class="nav-wrapper">
-    <a href="/" class="brand-logo center"><%= image_tag "logo.png" %></a>
-    <ul class="right hide-on-med-and-down">
 
-      <!-- Dropdown Trigger -->
-      <% if user_signed_in? %>
-      <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Mon compte<i class="material-icons right">arrow_drop_down</i></a></li>
-      <% else %>
-      <li><%= link_to "ME CONNECTER", new_user_session_path, class: "waves-effect waves-light btn btn-navbar" %></li>
-      <% end %>
+<div class="navbar-fixed">
+    <!-- Dropdown structure -->
+    <ul id="dropdown1" class="dropdown-content">
+      <li><%= link_to "PLAT DU JOUR", meals_path %></li>
+        <li><%= link_to "MON PROFIL", edit_profile_path %></li>
+        <li><a href="#!">ABONNEMENT</a></li>
+        <li class="divider"></li>
+        <li><%= link_to "DECONNEXION", destroy_user_session_path, method: :DELETE %></li>
     </ul>
-  </div>
-</nav>
-</div>
+      <nav>
+        <div class="nav-wrapper">
+          <%= image_tag "logo.png", id: "logo"%>
+            <ul class="right hide-on-med-and-down">
+                <li><%= image_tag "icon_meal.png", id: "logo_notifications"%></li>
+            <!-- Dropdown Trigger -->
+                <% if user_signed_in? %>
+                <li><a class="dropdown-button" href="#!" data-activates="dropdown1">MON COMPTE<i class="material-icons right">arrow_drop_down</i></a></li>
+              <% else %>
+                <li><%= link_to "SE CONNECTER", new_user_session_path, class: "waves-effect waves-light btn btn-navbar" %></li>
+              <% end %>
+            </ul>
+        </div>
+      </nav>
+    </div>
+
+
