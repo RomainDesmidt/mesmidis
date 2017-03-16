@@ -9,14 +9,14 @@
 <div class="navbar-fixed">
 <nav>
   <div class="nav-wrapper">
-    <a href="#!" class="brand-logo center"><%= image_tag "logo.png" %></a>
+    <a href="/" class="brand-logo center"><%= image_tag "logo.png" %></a>
     <ul class="right hide-on-med-and-down">
 
       <!-- Dropdown Trigger -->
       <% if user_signed_in? %>
       <li><a class="dropdown-button" href="#!" data-activates="dropdown1">Mon compte<i class="material-icons right">arrow_drop_down</i></a></li>
       <% else %>
-      <li><%= link_to "DEMANDER UNE INVITATION", new_user_registration_path, class: "waves-effect waves-light btn" %></li>
+      <li><%= link_to "ME CONNECTER", new_user_session_path, class: "waves-effect waves-light btn btn-navbar" %></li>
       <% end %>
     </ul>
   </div>
