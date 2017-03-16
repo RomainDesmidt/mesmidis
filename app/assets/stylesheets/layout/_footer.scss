@@ -1,4 +1,18 @@
 // Your footer style
+footer{
+  bottom: 0px;
+}
 .footer-container{
-  height: 80px;
+  height: 70px;
+
+}
+
+.fa{
+font-size: x-large;
+padding: 0 15px;
+}
+
+.fa:hover{
+  color: $brand-second-color;
+  font-size: xx-large;
 }

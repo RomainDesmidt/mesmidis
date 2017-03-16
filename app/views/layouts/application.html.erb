@@ -14,12 +14,15 @@
   </head>
 
   <body>
+  <header>
   <%= render 'shared/navbar' %>
+  </header>
   <%= render 'shared/flashes' %>
-
-  <div class="wrapper">
+  <main>
+  <div class="wrapper ">
     <%= yield %>
   </div>
+  </main>
     <%= javascript_include_tag 'application' %>
     <%= yield(:after_js) %>
     <%= render 'shared/footer' %>
