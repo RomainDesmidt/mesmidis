@@ -1,0 +1,25 @@
+<div class="container"><h1>Choix du plat du jour</h1>
+<p>Vous mangez quoi ce midi ?</p>
+
+  <div class="row" style="display: flex;">
+    <% @today_meals.each do |meal| %>
+    <div class="col s12 m4" style="flex: 1 1 auto;">
+      <div class="card small">
+        <div class="card-image">
+          <%=  cl_image_tag(meal.picture,
+          width: 200, height: 300, crop: :fill)  %>
+          <span class="card-title"><%= meal.name %></span>
+        </div>
+        <div class="card-content">
+          <p><strong> <%= meal.restaurant.name %></strong> : <%= meal.today_count %> I am a very simple card. I am good at containing small bits of information.
+          I am convenient because I require little markup to use effectively.</p>
+        </div>
+        <div class="card-action">
+
+          <a href="#">choisir ce plat </a>
+        </div>
+      </div>
+    </div>
+    <% end %>
+  </div>
+</div>
