@@ -2,14 +2,14 @@
  * Your CSS code for flash notices and alerts
 * ------------------------------------- */
 
-.alert {
+#card-alert {
   margin: 0;
   text-align: center;
   color: white;
 }
 .alert-info {
-  background: color("green", "base");
+  background: color($brand-second-color, "base");
 }
 .alert-warning {
-  background: color("red", "base");
+  background: color($brand-color, "base");
 }

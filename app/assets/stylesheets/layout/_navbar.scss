@@ -1,3 +1,13 @@
 nav {
-  background-color: $cream;
+  //background-color: $cream;
+}
+
+
+nav .brand-logo img {
+
+  height: 25px;
+}
+
+.btn-navbar {
+  background-color: $brand-color;
 }

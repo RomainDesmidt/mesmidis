@@ -1,16 +1,24 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
-<%= current_restaurant %>
+    </div>
+    <div class="carousel carousel-slider banner" style="height: 100vh;">
+    <div class="carousel-fixed-item center">
+      <a class="btn waves-effect white grey-text darken-text-2">DEMANDER UNE INVITATION</a>
+    </div>
+    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1600/800/food/1');"></div>
+    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1600/800/food/2');"></div>
+    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1600/800/food/3');"></div>
+    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,101,168,0.6) 0%, rgba(0,36,61,0.6) 50%), url('http://lorempixel.com/1600/800/food/4');"></div>
+  </div>
+<% content_for(:after_js) do %>
+  <script type="text/javascript">
 
-<a class="waves-effect waves-light btn">button</a>
+    $(document).ready(function(){
+      $('.carousel.carousel-slider').carousel({fullWidth: true});
+      autoplay()
+function autoplay() {
+    $('.carousel').carousel('next');
+    setTimeout(autoplay, 6000);
+}
+    });
+  </script>
 
-<blockquote>
-  This is an example quotation that uses the blockquote tag.
-</blockquote>
-
-<%= simple_form_for Meal.new do |f| %>
-  <%= f.input :name %>
-  <%= f.association :category, as: :select %>
-  <%= f.input :picture %>
-  <%= f.button :submit, "Ajouter ce repas" %>
 <% end %>

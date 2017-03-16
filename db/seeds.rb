@@ -1,5 +1,6 @@
 puts "Cleaning database..."
 Order.destroy_all
+UserFoodPreference.destroy_all
 Restaurant.destroy_all
 Meal.destroy_all
 User.destroy_all
