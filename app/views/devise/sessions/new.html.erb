@@ -1,16 +1,9 @@
-<h2></h2>
-<center>
-<div class="container">
-  <div class="row">
-    <div class="login-form ">
-      <div class="col s12 z-depth-4 login-page card-panel small">
-      <div class="row">
-        <div class="input-field col s12 center">
-          <h4>ME CONNECTER</h4>
-          <p class="center"></p>
-        </div>
-      </div>
-
+<div class="row login-form">
+  <div class="col s12">
+    <div class="card hoverable">
+      <div class="card-content">
+        <span class="card-title center">ME CONNECTER</span>
+        <div class="divider"></div>
 <%= simple_form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
   <div class="form-inputs">
     <%= f.input :email, required: false, autofocus: true %>
@@ -18,15 +11,16 @@
     <%= f.input :remember_me, as: :boolean if devise_mapping.rememberable? %>
   </div>
 
-  <div class="form-actions">
-    <%= f.button :submit, "ME CONNECTER" %>
-  </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
-</div>
+   <div class="form-actions center">
+            <%= f.button :submit, "ME CONNECTER" %>
+          </div>
+        <% end %>
+      </div>
+      <div class="card-action">
+        <div class="devise-links">
+          <%= render "devise/shared/links" %>
+        </div>
+      </div>
     </div>
   </div>
 </div>
-
-</center>

@@ -1,20 +1,21 @@
 <% if notice %>
-<div id="card-alert" class="card green">
-  <div class="card-content white-text">
-    <p><i class="mdi-navigation-check"></i> <%= notice %></p>
-  </div>
-  <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">×</span>
-  </button>
-</div>
+
+    <div id="card-alert" class="card green">
+      <div class="card-content white-text">
+        <p><i class="mdi-navigation-check"></i><i class="mdi-navigation-check"></i> <%= notice %></p>
+      </div>
+      <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">×</span>
+      </button>
+    </div>
 <% end %>
 <% if alert %>
-<div id="card-alert" class="card red">
-  <div class="card-content white-text">
-    <p><i class="mdi-alert-error"></i> <%= alert %> </p>
-  </div>
-  <button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
-  <span aria-hidden="true">×</span>
-  </button>
+<div id="card-alert" class="card orange">
+<div class="card-content white-text">
+  <p><i class="mdi-alert-error"></i> <%= alert %> </p>
+</div>
+<button type="button" class="close white-text" data-dismiss="alert" aria-label="Close">
+<span aria-hidden="true">×</span>
+</button>
 </div>
 <% end %>
