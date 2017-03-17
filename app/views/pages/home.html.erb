@@ -2,8 +2,13 @@
     <div class="carousel carousel-slider banner" style="height: 60vh;">
 
     <div class="carousel-fixed-item center">
-      <h2>OFFREZ VOUS</h2> <h1>LE RESTO</h1> <h2>CHAQUE MIDI</h2> <h1>POUR 6 €</h1>
-      <%= button_to "DEMANDER UNE INVITATION ", new_user_session_path, id: "banner-button", class: "btn waves-effect waves-light btn-large", method: :get %>
+
+      <h2>OFFREZ-VOUS</h2> <h1>LE RESTO</h1> <h2>CHAQUE MIDI</h2> <h1>POUR 6 €</h1>
+      <% if user_signed_in? %>
+      <%= button_to "ACCEDER AUX PLATS DU JOUR ", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large", method: :get %>
+      <% else %>
+      <%= button_to "DEMANDER UNE INVITATION ", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large", method: :get %>
+      <% end %>
     </div>
     <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600food/1');"></div>
     <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600/food/2');"></div>
@@ -21,7 +26,7 @@
           <div class="icon-block">
             <h2 class="center brown-text">
             <%= image_tag "monitor.png", class: "icons"%></h2>
-            <h4 class="center">CHOISSISEZ</h4>
+            <h4 class="center">CHOISISSEZ</h4>
             <h5 class="center-align">Commandez sur le site parmi un large choix de plats du jour</h5>
           </div>
         </div>
@@ -34,7 +39,7 @@
             <h4 class="center">EMPORTEZ</h4>
 
             <h5 class="center-align">Venez retirer votre commande déja
-            prête, en quelques minutes</h5>>
+            prête, en quelques minutes</h5>
           </div>
         </div>
 

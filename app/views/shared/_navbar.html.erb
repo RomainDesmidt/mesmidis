@@ -2,12 +2,24 @@
 
 <div class="navbar-fixed">
     <!-- Dropdown structure -->
-    <ul id="dropdown1" class="dropdown-content">
-      <li><%= link_to "PLAT DU JOUR", meals_path %></li>
-        <li><%= link_to "MON PROFIL", edit_profile_path %></li>
-        <li><a href="#!">ABONNEMENT</a></li>
+    <ul id="dropdown1" class="dropdown-content" >
+      <li><%= link_to "", href: meals_path do %>
+      <%= image_tag "plate_navbar.png", class: "icon-navbar"%> PLAT DU JOUR
+      <% end %>
+      </li>
+        <li><%= link_to "", href: edit_profile_path do %>
+        <%= image_tag "usernavbar.png", class: "icon-navbar"%> MON PROFIL
+          <% end %>
+        </li>
+        <li><%= link_to "", href: root_path do %>
+        <%= image_tag "abonnement_navbar.png", class: "icon-navbar"%>ABONNEMENT
+          <% end %>
+        </li>
         <li class="divider"></li>
-        <li><%= link_to "DECONNEXION", destroy_user_session_path, method: :DELETE %></li>
+        <li><%= link_to "DECONNEXION", href: destroy_user_session_path, method: :DELETE do %>
+        <i class="fa fa-sign-out icon-navbar"  aria-hidden="true"></i>DECONNEXION
+          <% end %>
+        </li>
     </ul>
       <nav>
         <div class="nav-wrapper">

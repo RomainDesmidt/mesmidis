@@ -27,6 +27,7 @@ h1 {
 
 h5 {
   text-transform: uppercase;
+  font-size: 1.2rem;
 }
 
 
@@ -36,6 +37,10 @@ h5 {
   margin: 0;
 }
 
+.checkbox {
+  float: left !important;
+  padding-right: 10px;
+}
 
 
 // Paddings
