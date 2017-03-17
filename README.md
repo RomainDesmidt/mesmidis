@@ -2,4 +2,9 @@ Rails app generated with [lewagon/rails-templates](https://github.com/lewagon/ra
 
 ################################# TODO ###################
 
+
 voir pour faire un scope sur le user qui nous donne accès au meal pour lui présenter (Nico 16/03)
+
+
+#################### utilisé pour le devise ########################
+https://github.com/techgurupezza/devise_materialize/blob/master/lib/generators/templates/assets/stylesheets/devise.scss

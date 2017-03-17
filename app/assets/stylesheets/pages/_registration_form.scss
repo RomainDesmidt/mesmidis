@@ -17,9 +17,11 @@
   position: relative;
   z-index: 2;
   color: grey;
+  font-size: 24px;
 }
 .login-form {
-  margin: auto !important;
+  // margin: auto !important;
+      margin-top: 42px;
 
   .card {
     max-width: 500px;
