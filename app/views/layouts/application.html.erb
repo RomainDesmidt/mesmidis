@@ -11,14 +11,17 @@
     <script src="https://use.typekit.net/gcr8wpv.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
+    <%= yield(:after_css) %>
   </head>
 
   <body>
   <header>
+
   <%= render 'shared/navbar' %>
+
   </header>
   <%= render 'shared/flashes' %>
-  <main>
+  <main id="main">
   <div class="wrapper ">
     <%= yield %>
   </div>

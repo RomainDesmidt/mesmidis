@@ -1,6 +1,5 @@
 Rails.application.routes.draw do
   root to: 'pages#home'
-  # get 'guideline', to: "pages#guideline"
   devise_for :restaurants
   devise_for :users
 
@@ -17,4 +16,5 @@ Rails.application.routes.draw do
       get :confirmation
     end
   end
+  get 'guideline', to: "pages#guideline"
 end

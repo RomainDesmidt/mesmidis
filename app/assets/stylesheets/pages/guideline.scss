@@ -1,0 +1,18 @@
+#main {
+    padding-left: 240px;
+}
+
+#left-sidebar-nav {
+    position: fixed;
+    width: 100px;
+    left: 180px;
+    z-index: 999;
+    height: auto;
+}
+.style-guide--entry { margin-top: 1em; }
+.style-guide--subentry { margin-top: 0.5em; }
+
+ul.side-nav.leftside-navigation {
+    top: 60px;
+    overflow: hidden;
+}
