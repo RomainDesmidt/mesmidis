@@ -16,6 +16,7 @@ gem 'devise-i18n'
 gem 'cloudinary'
 gem 'carrierwave', '~> 0.11.2'
 gem 'mailjet'
+gem 'geocoder'
 
 # assets
 gem 'sass-rails'
