@@ -9,4 +9,8 @@ class PagesController < ApplicationController
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
   end
+
+  def guideline
+    @today_meals = Meal.for_today
+  end
 end
