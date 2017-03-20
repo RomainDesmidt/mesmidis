@@ -15,7 +15,7 @@
         <span class="fa fa-envelope-o icon-registration-input"></span>
           <%= f.input :email, required: true %>
         <span class="fa fa-lock icon-registration-input"></span>
-          <%= f.input :password, required: true, label_html: { class: 'left' }, hint: ("#{@minimum_password_length} caractères minimum, " if @minimum_password_length) %>
+          <%= f.input :password, required: true, label_html: { class: 'left' }, hint: ("#{@minimum_password_length} caractères minimum" if @minimum_password_length) %>
           <span class="fa fa-lock icon-registration-input"></span>
           <%= f.input :password_confirmation, required: true, label_html: { class: 'left' } %>
         </div>
