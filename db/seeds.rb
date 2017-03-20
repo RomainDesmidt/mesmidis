@@ -40,9 +40,11 @@ puts "Creating restaurants and their meals..."
 
 lecomptoir = Restaurant.create!(
   name: "Le Comptoir", email: "contact@lecomptoir.com", time_slot: "12",
-  address: "31 rue Fouré", zip_code: "44000", city: "Nantes",
+  address: "21 rue Fouré", zip_code: "44000", city: "Nantes",
   password: "123456", password_confirmation: "123456",
-  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_comptoir.jpg"))
+  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_comptoir.jpg")),
+  latitude: 47.211948,
+  longitude: -1.546676
 )
 
 lecomptoir_couscous = Meal.create!(
