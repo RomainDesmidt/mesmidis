@@ -26,20 +26,7 @@
     <div class="media-section">
       <div class="row">
         <% @today_meals.each do |meal| %>
-        <div class="col s12 m6 l4">
-          <div class="card">
-            <div class="card-image">
-              <%=  cl_image_tag(meal.picture,
-              height: 220, crop: :fill)  %>
-            </div>
-            <div class="card-content">
-              <p><strong> <%= meal.name.upcase %></strong></p>
-            </div>
-            <div class="card-action">
-              <%= link_to "réserver".upcase, root_path %>
-            </div>
-          </div>
-        </div>
+        <%= render 'shared/card', meal: meal %>
         <% end %>
       </div>
 
