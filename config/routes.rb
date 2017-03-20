@@ -1,4 +1,18 @@
 Rails.application.routes.draw do
+  get 'restaurants/index'
+
+  get 'restaurants/show'
+
+  get 'restaurants/new'
+
+  get 'restaurants/create'
+
+  get 'restaurants/edit'
+
+  get 'restaurants/update'
+
+  get 'restaurants/destroy'
+
   root to: 'pages#home'
   devise_for :restaurants
   devise_for :users
