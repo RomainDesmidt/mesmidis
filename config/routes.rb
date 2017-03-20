@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+
   root to: 'pages#home'
   devise_for :restaurants
   devise_for :users
@@ -6,6 +7,8 @@ Rails.application.routes.draw do
   resource :profile, only: [:show, :edit, :update]
 
   resources :subscriptions, only: [:new, :create]
+
+  resources :restaurants
 
   resources :meals, only: [:index, :show] do
     resources :orders, only: [:create]
