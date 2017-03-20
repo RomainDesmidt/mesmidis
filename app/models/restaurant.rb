@@ -4,6 +4,8 @@ class Restaurant < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+  geocoded_by :full_address
+
   mount_uploader :picture, PictureUploader
 
   has_many :meals, dependent: :destroy
@@ -14,7 +16,7 @@ class Restaurant < ApplicationRecord
   belongs_to :thursday_meal,  class_name: 'Meal', optional: true
   belongs_to :friday_meal,    class_name: 'Meal', optional: true
 
-
+  after_validation :geocode, if: :full_address_changed?
 
   def self.meals_for_today
     today_meal_method       = Date.today.strftime("%A").downcase + "_meal"
@@ -26,5 +28,13 @@ class Restaurant < ApplicationRecord
       meal_count  = restaurant.send(today_meal_count_method)
       { restaurant: restaurant, meal: meal, meal_count: meal_count }
     end
+  end
+
+  def full_address
+    "#{address}, #{zip_code}, #{city}"
+  end
+
+  def full_address_changed?
+    address_changed? || zip_code_changed? || city_changed?
   end
 end

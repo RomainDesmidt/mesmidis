@@ -40,9 +40,11 @@ puts "Creating restaurants and their meals..."
 
 lecomptoir = Restaurant.create!(
   name: "Le Comptoir", email: "contact@lecomptoir.com", time_slot: "12",
-  address: "31 rue Fouré", zip_code: "44000", city: "Nantes",
+  address: "21 rue Fouré", zip_code: "44000", city: "Nantes",
   password: "123456", password_confirmation: "123456",
-  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_comptoir.jpg"))
+  picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_comptoir.jpg")),
+  latitude: 47.211948,
+  longitude: -1.546676
 )
 
 lecomptoir_couscous = Meal.create!(
@@ -78,7 +80,7 @@ lecomptoir.update!(
 
 la500 = Restaurant.create!(
   name: "La 500", email: "contact@la500.com", time_slot: "12",
-  address: "28 rue Fouré", zip_code: "44000", city: "Nantes",
+  address: "1 rue Santeuil", zip_code: "44000", city: "Nantes",
   password: "123456", password_confirmation: "123456",
   picture: File.new(Rails.root.join("db/fixtures/images/restaurants/la_500.jpg"))
 )
@@ -117,7 +119,7 @@ la500.update!(
 
 lecoufourre = Restaurant.create!(
   name: "Le Cou Fourré", email: "contact@lecoufourre.com", time_slot: "12",
-  address: "10 rue de l'église", zip_code: "44100", city: "Nantes",
+  address: "30 rue de Fouré", zip_code: "44000", city: "Nantes",
   password: "123456", password_confirmation: "123456",
   picture: File.new(Rails.root.join("db/fixtures/images/restaurants/le_cou_fourre.jpg"))
 )

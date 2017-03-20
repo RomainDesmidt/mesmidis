@@ -1,6 +1,5 @@
-class PagesController < ApplicationController
-  skip_before_action :authenticate_user!, only: [:home, :guideline]
-  def home
+class RestaurantsController < ApplicationController
+  def index
     @restaurants = Restaurant.where.not(latitude: nil, longitude: nil)
 
     @hash = Gmaps4rails.build_markers(@restaurants) do |restaurant, marker|
@@ -9,4 +8,23 @@ class PagesController < ApplicationController
       # marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
     end
   end
+
+  def show
+  end
+
+  def new
+  end
+
+  def create
+  end
+
+  def edit
+  end
+
+  def update
+  end
+
+  def destroy
+  end
 end
+
