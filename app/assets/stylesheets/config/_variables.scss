@@ -3,18 +3,20 @@
  * ------------------------------------- */
 // Google fonts
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:400,300,700|Raleway:400,100,300,700,500");
-$base-font: "proxima-nova","Open Sans", "Helvetica", "sans-serif";
+$base-font: "Hero","proxima-nova","Open Sans", "Helvetica", "sans-serif";
 //$header-font: "Raleway", "Helvetica", "sans-serif";
 
 // Local fonts (uncomment following lines)
-//@font-face {
-//  font-family: "Font ostrich-black-webfont";
- //  src: font-url('OstrichSans-Black.otf');
+@font-face {
+font-family: "Hero";
+src: local('Hero'), url("Hero.otf");
+src: local("Hero Light.otf"), url("Hero Light.otf");
+// src: font-url('Hero-Light.otf');
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
 //      src:  font-url('ostrich-black-webfont.woff') format('woff');
 //        font-url('FontFile.ttf') format('truetype')
- //}
- //$base-font: "Font ostrich-black-webfont";
+}
+// $base-font: "Font Hero-webfont";
 
 // Font-size and line-height
 $base-size: 16px;
