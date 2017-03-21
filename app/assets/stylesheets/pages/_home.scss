@@ -2,30 +2,83 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
-.banner {
-    color: white;
-    text-align: center;
-    height: 100vh;
-    background-size: cover !important;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+
+#baseline-banner{
+  background-color: $brand-second-color;
+  color: white;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: 500;
+  letter-spacing: 7.5px;
+  line-height: 53px;
+  text-transform: capitalize;
+  height: 600px;
 }
 
+.meals-home{
+  display:flex;
+  flex-direction: column;
+  height: 600px;
+  text-align: center;
+  margin: 0 -12px;
+  background-color: rgba(15,15,15,0.5);
+  z-index: 1;
 
-.baseline-top h1 {
-    font-size: 70px;
-    font-weight: 500;
-    letter-spacing: 2.5px;
-    line-height: 80px;
-    text-transform: capitalize;
 }
 
+.meals-image{
+  flex: 0 0 20%;
+  background-image: image-url('meal-monday.png');
+  background-size: cover;
+  background-position:center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#meal-monday{
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 50%), url('meal-monday.png');
+}
+
+#meal-tuesday{
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 50%), url('meal-tuesday.png');
+}
+
+#meal-wednesday{
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 50%), url('meal-wednesday.png');
+}
+
+#meal-thursday{
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 50%), url('meal-thursday.png');
+}
+
+#meal-friday{
+  background-image: linear-gradient(-225deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,0.2) 50%), url('meal-friday.png');
+}
+
+#baseline_image{
+  height: 500px;
+}
 .icon-block {
   padding: 0 15px;
 }
 .icons {
   size: 35px;
+}
+
+.btn-home-inside {
+  background-color: $brand-color;
+}
+
+.btn-home-inside:hover {
+  background-color: $brand-color;
+}
+
+#meal-day {
+  font-family: OstrichBlack;
+  font-size: 24px;
+  color: rgba(255,255,255,0.9);
 }
 
 
