@@ -102,7 +102,7 @@
       <H3 class="style-guide--subentry">CARDS</h5>
       <div class="row">
       <% @today_meals.first do |meal| %>
-        <%= render 'shared/card' %>
+        <%= render 'shared/card', meal: meal %>
         <% end %>
       </div>
     </div>

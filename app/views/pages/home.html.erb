@@ -2,9 +2,10 @@
 <div class="carousel carousel-slider banner" style="height: 60vh;">
   <div class="carousel-fixed-item center" style="bottom: 100px;">
     <div class="baseline-top">
-      <span class="baseline">OFFREZ-VOUS</span><br> <span class="baseline-strong"> LE RESTO</span><br>
+    <h1>OFFREZ-VOUS <span style="font-family: ostrichBlack;">LE RESTO</span><br>CHAQUE MIDI <span style="font-family: ostrichBlack;">POUR 6 €</span></h1>
+      <!-- <span class="baseline">OFFREZ-VOUS</span><br> <span class="baseline-strong"> LE RESTO</span><br>
       <span class="baseline">CHAQUE MIDI</span><br>
-      <span class="baseline-strong">POUR 6 €</span>
+      <span class="baseline-strong">POUR 6 €</span> -->
     </div>
     <% if user_signed_in? %>
     <%= button_to "ACCEDER AUX PLATS DU JOUR ", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large", method: :get %>
@@ -26,8 +27,8 @@
         <div class="icon-block">
           <h2 class="center brown-text">
           <%= image_tag "monitor.png", class: "icons"%></h2>
-          <h4 class="center">CHOISISSEZ</h4>
-          <h5 class="center-align">Commandez sur le site parmi un large choix de plats du jour</h5>
+          <h3 class="center">CHOISISSEZ</h3>
+          <p class="center-align">Commandez sur le site parmi un large choix de plats du jour.</p>
         </div>
       </div>
       <div class="col s12 m4">
@@ -35,17 +36,17 @@
           <h2 class="center brown-text">
           <%= image_tag "shopping-bag.png", class: "icons"%>
           </h2>
-          <h4 class="center">EMPORTEZ</h4>
-          <h5 class="center-align">Venez retirer votre commande déja
-          prête, en quelques minutes</h5>
+          <h3 class="center">EMPORTEZ</h3>
+          <p class="center-align">Venez retirer votre commande déja
+          prête, en quelques minutes.</p>
         </div>
       </div>
       <div class="col s12 m4">
         <div class="icon-block">
           <h2 class="center brown-text">
           <%= image_tag "restaurant.png", class: "icons"%></h2>
-          <h4 class="center">SAVOUREZ</h4>
-          <h5 class="center-align">Régalez-vous tous les midis.</h5>
+          <h3 class="center">SAVOUREZ</h3>
+          <p class="center-align">Régalez-vous tous les midis.</p>
         </div>
       </div>
     </div>

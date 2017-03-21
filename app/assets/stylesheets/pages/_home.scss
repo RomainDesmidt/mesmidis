@@ -12,6 +12,15 @@
     justify-content: center;
 }
 
+
+.baseline-top h1 {
+    font-size: 70px;
+    font-weight: 500;
+    letter-spacing: 2.5px;
+    line-height: 80px;
+    text-transform: capitalize;
+}
+
 .icon-block {
   padding: 0 15px;
 }
@@ -19,17 +28,6 @@
   size: 35px;
 }
 
-.baseline-top {
-  padding-bottom: 60px;
-}
 
 
-.baseline {
-  font-size:53px;
-  font-weight: 400;
-}
 
-.baseline-strong {
-font-size:53px;
-font-weight: 600;
-}
