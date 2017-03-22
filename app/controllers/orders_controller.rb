@@ -10,6 +10,7 @@ def create
 
     redirect_to meals_path
 end
+
 private
   def orders_params
     params.require(:order).permit(:user_id, :meal_id, :date, :time_slot)

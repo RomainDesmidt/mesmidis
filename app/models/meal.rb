@@ -6,10 +6,12 @@ class Meal < ApplicationRecord
 
   scope :for_today, -> do
     day_name = Date.today.strftime('%A').downcase
-    select("meals.*, restaurants.name as restaurant_name, restaurants.address as restaurant_address, #{day_name}_meal_count as today_count").
+    select("meals.*, #{day_name}_meal_count as today_count").
       joins("INNER JOIN restaurants ON meals.id = restaurants.#{day_name}_meal_id").
       where("#{day_name}_meal_count > 0")
   end
+
+
 
 
   # pour les tests à supprimer

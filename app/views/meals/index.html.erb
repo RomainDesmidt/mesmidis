@@ -23,6 +23,18 @@
         </form>
       </div>
     </div>
+
+    <%= current_user.order_made_today.meal.name %>
+
+    <%= render 'shared/meal_of_day' %>
+<div class="media-section">
+      <div class="row">
+        <% current_user.order_made_today do |meal| %>
+        <%= render 'shared/card', meal: meal %>
+        <% end %>
+      </div>
+
+    </div>
     <div class="media-section">
       <div class="row">
         <% @today_meals.each do |meal| %>
