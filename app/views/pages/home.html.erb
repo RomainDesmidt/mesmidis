@@ -97,7 +97,7 @@
 $("#map-search").on("click", function(e){
   e.preventDefault();
   // console.log($("#address-autocomplete").value);
-  geocoder.geocode({'address': $("#address-autocomplete")["0"].value}, function(results, status) {
+  geocoder.geocode({'address': $("#address-autocomplete").val()}, function(results, status) {
     if (status === google.maps.GeocoderStatus.OK) {
       console.log(results);
       handler.map.centerOn(results[0].geometry.location);
