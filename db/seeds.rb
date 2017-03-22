@@ -60,7 +60,7 @@ lecomptoir_crevettes_sichuan = Meal.create!(
   category: Category.find_by_name!("Asiatique"),
   name: "Crevettes Sichuan",
   description: "",
-  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_crevettes_sichuan.jpg"))
+  picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_crevettes_sichuan.JPG"))
 )
 
 lecomptoir_pave_de_saumon = Meal.create!(
