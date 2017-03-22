@@ -1,0 +1,22 @@
+<div id="<%= meal.id %><%= meal.restaurant_id %>" class="modal">
+  <div class="modal-content">
+  <div class="flexmeals">
+    <div class="flexmeal">
+
+      <%=  cl_image_tag(meal.picture,
+      crop: :fill, class: "responsive-img modal-image")  %>
+    </div>
+    <div class="flexmeal modal-description">
+      <span class="modal-mealname uppercase center"><%= meal.name %></span>
+      <p>Couscous royal simple avec 1 morceaux d'agneau, 1 merguez , navets, courgettes.</p>
+      <p>Restaurant : <%= meal.restaurant_name %></p>
+      <p>adresse : <%= meal.restaurant_address %></p>
+      <p>Date à emporter : xxxx xx xxxxx</p>
+<p>Créneau horaire : <%= current_user.time_slot %> heures 00</p>
+    </div>
+  </div>
+</div>
+<div class="modal-footer">
+      <a href="#!" class=" modal-action modal-close waves-effect waves-green btn-flat">Agree</a>
+ </div>
+</div>

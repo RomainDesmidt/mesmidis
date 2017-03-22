@@ -9,6 +9,15 @@
 // Semantic color scheme
 $primary-color: $brand-color !default;
 $secondary-color: $brand-second-color !default;
+
+// 1. Colors
+// ==========================================================================
+
+$link-color: color($brand-second-color, "darken-1") !default;
+
+
+
+
 // 4. Cards
 // ==========================================================================
 

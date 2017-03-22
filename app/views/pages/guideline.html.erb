@@ -9,6 +9,7 @@
       <div class="collapsible-body" style="display: block;">
         <ul>
           <li><%= link_to "Typography", "#typography" %></li>
+          <li><%= link_to "Forms", "#forms" %></li>
           <li><%= link_to "Colors", "#colors" %></li>
           <li><%= link_to "Buttons", "#buttons" %></li>
           <li><%= link_to "Labels", "#labels" %></li>
@@ -24,7 +25,6 @@
           <li><%= link_to "Alerts", "#alerts" %></li>
           <li><%= link_to "Badges", "#badges" %></li>
           <li><%= link_to "Cards", "#cards" %></li>
-          <li><%= link_to "forms", "#forms" %></li>
         </ul>
       </div>
     </li>
@@ -60,12 +60,94 @@
       <h4>H4 Header</h4>
       <h5>H5 Header</h5>
       <h6>H6 Header</h6>
-      <p>paragraph</p>
+      <p>We use <%= @base_font %> font for any other text such as paragraphs, lists and so on.</p>
+    </div>
+    <div class="divider"></div>
+    <div class="section" id="forms">
+      <H3 class="style-guide--subentry">FORMS</h5>
+      <p>Stuff</p>
     </div>
     <div class="divider"></div>
     <div class="section" id="colors">
       <H3 class="style-guide--subentry">COLORS</h5>
-      <p>Stuff</p>
+      <div class="row style-guide--colors">
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color brand-color"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$brand-color</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color red"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$red</li>
+                    <li>$brand-danger</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color blue"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$blue</li>
+                    <li>$brand-primary</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color yellow"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$yellow</li>
+                    <li>$brand-info</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color orange"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$orange</li>
+                    <li>$brand-warning</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color green"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$green</li>
+                    <li>$brand-success</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="col s6 m4">
+              <div class="thumbnail">
+                <div class="color gray"></div>
+                <div class="caption">
+                  <ul class="list-unstyled">
+                    <li>$gray</li>
+                    <li>$gray-base</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
     </div>
     <div class="divider"></div>
     <div class="section" id="buttons">
@@ -88,6 +170,7 @@
       <p>Stuff</p>
     </div>
     <div class="divider"></div>
+    <h2 class="style-guide--entry" id="components" >COMPONENTS</h2>
     <div class="section" id="alerts">
       <H3 class="style-guide--subentry">ALERTS</h5>
       <p>Stuff</p>
@@ -101,15 +184,8 @@
     <div class="section" id="cards">
       <H3 class="style-guide--subentry">CARDS</h5>
       <div class="row">
-      <% @today_meals.first do |meal| %>
-        <%= render 'shared/card', meal: meal %>
-        <% end %>
+        <%= render 'shared/card', meal: Meal.for_today.first %>
       </div>
-    </div>
-    <div class="divider"></div>
-    <div class="section" id="forms">
-      <H3 class="style-guide--subentry">FORMS</h5>
-      <p>Stuff</p>
     </div>
   </div>
 </section>

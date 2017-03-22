@@ -51,6 +51,7 @@ lecomptoir_couscous = Meal.create!(
   restaurant: lecomptoir,
   category: Category.find_by_name!("Marocain"),
   name: "Couscous",
+  description: "Couscous royal simple avec 1 morceaux d'agneau, 1 merguez , navets, courgettes.",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_couscous.jpg"))
 )
 
@@ -58,6 +59,7 @@ lecomptoir_crevettes_sichuan = Meal.create!(
   restaurant: lecomptoir,
   category: Category.find_by_name!("Asiatique"),
   name: "Crevettes Sichuan",
+  description: "",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_crevettes_sichuan.jpg"))
 )
 
