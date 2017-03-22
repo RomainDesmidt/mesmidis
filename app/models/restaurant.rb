@@ -18,18 +18,6 @@ class Restaurant < ApplicationRecord
 
   after_validation :geocode, if: :full_address_changed?
 
-  def self.meals_for_today
-    today_meal_method       = Date.today.strftime("%A").downcase + "_meal"
-    today_meal_count_method = today_meal_method + "_count"
-
-    # Pas forcément le plus efficace sur la query, à retravailler
-    Restaurant.all.map do |restaurant|
-      meal        = restaurant.send(today_meal_method)
-      meal_count  = restaurant.send(today_meal_count_method)
-      { restaurant: restaurant, meal: meal, meal_count: meal_count }
-    end
-  end
-
   def full_address
     "#{address}, #{zip_code}, #{city}"
   end
