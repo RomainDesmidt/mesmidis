@@ -1,0 +1,41 @@
+.flexmeals {
+  display: flex;
+}
+.flexmeal {
+  flex: 1 1 auto;
+}
+
+.banner-meal {
+  padding: 150px 0;
+}
+.mealname  {
+  color:$brand-color;
+  position: inherit;
+  font-size: 20px;
+  margin-top: 0px;
+  text-weight:bold;
+}
+
+.modal-description {
+  padding-left: 10px;
+}
+
+.top-show-meal {
+  padding-top: 2em;
+}
+
+.mealreturn {
+  margin: 10px;
+}
+
+.meal-restaurant {
+  color:$gray;
+  font-size: 14px;
+  font-family:$base-font;
+}
+.meal-address {
+  color:$gray-light;
+  font-size: 12px;
+  font-family:$base-font;
+
+}

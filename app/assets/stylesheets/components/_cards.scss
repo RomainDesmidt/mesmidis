@@ -12,30 +12,31 @@
   position: absolute;
   top: 10px;
   left: 10px;
-  font-family:Helvetica;
+  font-family:$base-font;
   font-size: 12px;
   text-transform: uppercase;
   color:#ffffff;
 }
 .card-name {
-  color:#CB333B;
+  color:$brand-color;
   font-size:16px;
-  font-family:Helvetica;
+  font-family:$base-font;
+  letter-spacing: 0.5px;
   position: absolute;
   top: 260px;
   text-weight:bold;
 }
 .card-restaurant {
-  color:#818181;
+  color:$gray;
   font-size: 14px;
-  font-family:Helvetica;
+  font-family:$base-font;
   position: absolute;
   bottom: 30px;
 }
 .card-address {
-  color:#B7B7B7;
+  color:$gray-light;
   font-size: 12px;
-  font-family:Helvetica;
+  font-family:$base-font;
   position: absolute;
-  bottom: 5px;
+  bottom: 10px;
 }

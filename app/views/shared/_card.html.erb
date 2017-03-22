@@ -13,18 +13,22 @@
     </div>
   </div>
 </div>
-<!-- Modal Structure -->
-<div id="<%= meal.id %><%= meal.restaurant_id %>" class="modal">
+<!-- Modal Structure-->
+<div id="<%= meal.id %><%= meal.restaurant_id %>" class="modal menu-item-container">
   <div class="modal-content">
 
     <div class="row">
     <div class="col s12"><h4 class="uppercase"><%= meal.name %></h4></div>
       <div class="col s6"><%=  cl_image_tag(meal.picture,
-      height: 220, crop: :fill)  %></div>
-      <div class="col s6"><p>description du plat proposé par le restaurateur</p></div>
-      <div class="col s12">
-      <p>Restaurant : <%= meal.restaurant_name %></p>
-      <p>adresse : <%= meal.restaurant_address %></p>
+      height: 220, crop: :fill, class: "responsive-img hoverable")  %></div>
+      <div class="col s6">
+        <p>description du plat proposé par le restaurateur</p>
+        <p>Restaurant : <%= meal.restaurant_name %></p>
+        <p>adresse : <%= meal.restaurant_address %></p>
+      </div>
+      <div class="col s12 center">
+<p>Date à emporter : xxxx xx xxxxx</p>
+<p>Créneau horaire : <%= current_user.time_slot %> heures 00</p>
       </div>
     </div>
   </div>

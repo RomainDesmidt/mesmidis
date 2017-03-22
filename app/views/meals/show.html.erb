@@ -1,2 +1,33 @@
-<h1>Meals#show</h1>
-<p>Find me in app/views/meals/show.html.erb</p>
+<div class="media top-show-meal">
+  <div class="media-body">
+    <div class="media-section">
+      <div class="row">
+      <!-- <div class="col s12">
+       <%= link_to "retour aux plats", meals_path, class: "uppercase mealreturn" %>
+
+      </div> -->
+        <div class="col s12 m12">
+<div class="banner-meal" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600/food/1');"></div>
+        </div>
+        <div class="col s12 m12">
+        <span class="card-name uppercase mealname"><%= @meal.name %></span>
+          <div class="modal-description">
+
+            <p>Couscous royal simple avec 1 morceaux d'agneau, 1 merguez , navets, courgettes.</p>
+            <p><span class="meal-restaurant"><%= @meal.restaurant_name %></span></p>
+            <p><span class="meal-address"><%= @meal.restaurant_address %></span></p>
+            <p>Date à emporter : xxxx xx xxxxx</p>
+            <p>Créneau horaire : <%= current_user.time_slot %> heures 00</p>
+            <%= button_to " je réserve mon midi ", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn upercase", method: :get %>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="media-aside">
+    <div class="media-section">
+      <div id="map" style="width: 100%; height: 600px;"></div>
+      <%= render '/shared/js-googlemap' %>
+    </div>
+  </div>
+</div>
