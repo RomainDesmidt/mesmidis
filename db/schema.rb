@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322135326) do
+ActiveRecord::Schema.define(version: 20170322150352) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,11 +38,10 @@ ActiveRecord::Schema.define(version: 20170322135326) do
     t.integer  "meal_id"
     t.date     "date"
     t.string   "status"
-    t.datetime "created_at",   null: false
-    t.datetime "updated_at",   null: false
-    t.integer  "time_slot_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.string   "time_slot"
     t.index ["meal_id"], name: "index_orders_on_meal_id", using: :btree
-    t.index ["time_slot_id"], name: "index_orders_on_time_slot_id", using: :btree
     t.index ["user_id"], name: "index_orders_on_user_id", using: :btree
   end
 
@@ -149,7 +148,6 @@ ActiveRecord::Schema.define(version: 20170322135326) do
   add_foreign_key "meals", "categories"
   add_foreign_key "meals", "restaurants"
   add_foreign_key "orders", "meals"
-  add_foreign_key "orders", "time_slots"
   add_foreign_key "orders", "users"
   add_foreign_key "restaurants", "meals", column: "friday_meal_id", on_delete: :nullify
   add_foreign_key "restaurants", "meals", column: "monday_meal_id", on_delete: :nullify
