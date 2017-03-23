@@ -6,7 +6,7 @@
       height: 240, crop: :fill)  %>
     </div>
     <div class="card-content">
-      <div class="card-category">asiatique</div>
+      <div class="card-category"><%= meal.category.name %></div>
       <span class="card-name uppercase"><%= meal.name %></span>
       <span class="card-restaurant"><%= meal.restaurant.name %> (<strong>500m</strong>)</span>
       <span class="card-address"><%= meal.restaurant.address %></span>

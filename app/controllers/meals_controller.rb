@@ -2,6 +2,8 @@ class MealsController < ApplicationController
 
   def index
     @today_meals = Meal.for_today
+    # @filter_meals = Meal.find
+
 
     @meal_reserved = current_user.order_made_today
 

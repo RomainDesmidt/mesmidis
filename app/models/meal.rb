@@ -11,7 +11,7 @@ class Meal < ApplicationRecord
       where("#{day_name}_meal_count > 0")
   end
 
-
+  scope :categories, -> (category_id) { where category_id: category_id }
 
 
   # pour les tests à supprimer
