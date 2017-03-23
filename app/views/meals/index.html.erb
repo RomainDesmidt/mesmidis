@@ -3,34 +3,28 @@
 </div>
 <div class="media">
   <div class="media-body">
+    <%= render 'shared/search-meal' %>
 
-    <%= render 'search_meals' %>
-
-
-    <%= render 'shared/meal_of_day' %>
-<div class="media-section">
+    <div class="media-section">
       <div class="row">
+                <!-- display meal order for the day
+                <%= render 'shared/meal_of_day' %>
+                -->
         <% meal = @meal_reserved.meal %>
-          <%= render 'shared/card-meal', meal: meal, order: @order %>
-
-
-
-
-
+        <%= render 'shared/card-meal', meal: meal, order: @order %>
       </div>
-
     </div>
     <div class="media-section">
       <div class="row">
         <% @today_meals.each do |meal| %>
-          <%= render 'shared/card-meal', meal: meal, order: @order %>
+        <%= render 'shared/card-meal', meal: meal, order: @order %>
         <% end %>
       </div>
     </div>
   </div>
   <div class="media-aside">
     <div class="media-section">
-    <div id="map" style="width: 100%; height: 600px;"></div>
+      <div id="map" style="width: 100%; height: 600px;"></div>
       <%= render '/shared/js-googlemap' %>
     </div>
   </div>
