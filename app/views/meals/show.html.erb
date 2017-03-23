@@ -14,12 +14,22 @@
           <div class="modal-description">
 
             <p>Couscous royal simple avec 1 morceaux d'agneau, 1 merguez , navets, courgettes.</p>
-            <p><span class="meal-restaurant"><%= @meal.restaurant_name %></span></p>
-            <p><span class="meal-address"><%= @meal.restaurant_address %></span></p>
+            <p><span class="meal-restaurant"><%= @meal.restaurant.name %></span></p>
+            <p><span class="meal-address"><%= @meal.restaurant.address %></span></p>
             <p>Date à emporter : xxxx xx xxxxx</p>
-            <p>Créneau horaire : <%= current_user.time_slot %> heures 00</p>
-            <%= button_to " je réserve mon midi ", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn upercase", method: :get %>
+
           </div>
+          <div class="modal-description">
+            <%= simple_form_for [@meal, @order], method: :post do |f| %>
+            <input name="user_id" type="hidden" value="<%= current_user %>">
+<p>Votre créneau horaire favori : <%= f.select :time_slot, User.time_slot.values, selected: current_user.time_slot %></p>
+<%= button_tag(type: 'submit', class:"btn waves-effect waves-light btn-large") do %>
+            <i class="material-icons right">send</i> <span class="uppercase">je réserve mon midi</span>
+            <% end %>
+        <% end %>
+
+          </div>
+
         </div>
       </div>
     </div>

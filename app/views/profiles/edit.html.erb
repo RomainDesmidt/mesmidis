@@ -57,14 +57,9 @@
                 <!-- need refactoring, but with Materialize, don't know how to use simple_form to handle this one -->
                 <div class="row">
                 <div class="input-field col s12">
-                  <!-- <select name="user[time_slot]" id="user_time_slot">
-                    <option value="" disabled selected>Choose your option</option>
-                    <% ["12H30", "13H00", "13H30", "14H00"].each_with_index do |time_slot, index| %>
-                      <option <%= @user.time_slot == index + 1 ? "selected" : "" %> value="<%= index + 1 %>"><%= time_slot %></option>
-                    <% end %>
-                  </select>
-                  <label>Créneau Horaire</label> -->
+
                   <%= f.select :time_slot, User.time_slot.values %>
+                  <label>Créneau Horaire</label>
                 </div>
                 </div>
                 <!-- BAD STYLE -->
