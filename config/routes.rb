@@ -6,7 +6,11 @@ Rails.application.routes.draw do
 
   resource :profile, only: [:show, :edit, :update]
 
-  resources :subscriptions, only: [:new, :create]
+  # resources :subscriptions, only: [] do
+  #   resources :user_subscriptions, only: [:create]
+  # end
+
+  resources :user_subscriptions, only: [:new, :create, :destroy]
 
   resources :restaurants
 

@@ -1,0 +1,23 @@
+
+<div class="container">
+  <%= simple_form_for @user_subscription do |f| %>
+    <%= label_tag "", "QUEL ABONNEMENT VOULEZ-VOUS CHOISIR ?" %>
+    <div class="col-s12">
+      <% @subscriptions.each do |subscription| %>
+        <div class="col s12 m6 l4">
+          <div class="subscription-card">
+            <label for="<%= "user_subscription_subscription_id_#{subscription.id}" %>">
+              <%= radio_button_tag "user_subscription[subscription_id]", subscription.id, checked = false ,options = {class: "hide-radio"} %>
+              <%= subscription.name  %>
+              <%= subscription.meals_count %>
+              <%= subscription.price %>
+            </label>
+          </div>
+        </div>
+      <% end %>
+    </div>
+    <%= submit_tag("C'EST PARTI !", class: "form-submit-btn btn-unmarged") %>
+  <% end %>
+</div>
+
+

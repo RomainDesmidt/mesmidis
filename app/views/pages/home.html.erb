@@ -1,16 +1,18 @@
 <div class="banner">
   <div class="row">
     <div id="baseline-banner", class="col s7">
-     <!--  <h1>OFFREZ-VOUS</h1>
+ <!--      <div>
+      <h1>OFFREZ-VOUS</h1>
       <h1><span style="font-family: OstrichSansInline;font-size: 100px;">LE RESTO</span></h1>
       <h1>CHAQUE MIDI</h1>
-      <h1><span style="font-family:OstrichSansInline;font-size: 100px;">POUR 6 €</span></h1> -->
+      <h1><span style="font-family:OstrichSansInline;font-size: 100px;">POUR 6 €</span></h1>
+      </div> -->
       <%= image_tag "baseline-image.png", id: "baseline_image" %>
       <div class="btn-home">
          <% if user_signed_in? %>
          <%= button_to "ACCEDER AUX PLATS DU JOUR ", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside", method: :get %>
          <% else %>
-         <%= button_to "DEMANDER UNE INVITATION ", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside", method: :get %>
+         <%= button_to "créer un compte", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
          <% end %>
        </div>
     </div>
@@ -32,13 +34,6 @@
         <p id="meal-day">Vendredi</p>
       </div>
     </div>
-  <!-- <div id="carousel carousel-slider banner", class="col s4">
-
-    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600/food/1');"></div>
-    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600/food/2');"></div>
-    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600/food/3');"></div>
-    <div class="carousel-item" style="background-image: linear-gradient(-225deg, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.3) 50%), url('http://lorempixel.com/1700/600/food/4');"></div>
-    </div> -->
   </div>
 </div>
 <div class="container">
