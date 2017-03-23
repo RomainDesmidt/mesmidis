@@ -1,13 +1,16 @@
 <div class="col s12 m6 l4">
   <figure class="card hoverable card-meal">
-    <div class="card-image">
-      <a href="#<%= meal.id %><%= meal.restaurant_id %>" class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">add</i></a>
+    <div class="card-image" id="meal-tuesday">
+<!-- <a href="#<%= meal.id %><%= meal.restaurant_id %>" class="btn-floating halfway-fab waves-effect waves-light"><i class="material-icons">add</i></a>
       <%=  cl_image_tag(meal.picture,
-      height: 240, crop: :fill)  %>
+      height: 240, crop: :fill)  %>-->
+
+      <span class="card-name uppercase"><%= meal.name %></span>
     </div>
     <div class="card-content">
       <div class="card-category"><%= meal.category.name %></div>
-      <span class="card-name uppercase"><%= meal.name %></span>
+
+      <span class="card-button"><a href="#!" class="waves-effect waves-light btn btn-small waves-green uppercase">je réserve</a></span>
       <span class="card-restaurant"><%= meal.restaurant.name %> (<strong>500m</strong>)</span>
       <span class="card-address"><%= meal.restaurant.address %></span>
     </div>
