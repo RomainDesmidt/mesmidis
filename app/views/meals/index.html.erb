@@ -47,10 +47,9 @@
     <div class="media-section">
       <div class="row">
         <% @today_meals.each do |meal| %>
-        <%= render 'shared/card', meal: meal %>
+          <%= render 'shared/card_test', meal: meal, order: @order %>
         <% end %>
       </div>
-
     </div>
   </div>
   <div class="media-aside">

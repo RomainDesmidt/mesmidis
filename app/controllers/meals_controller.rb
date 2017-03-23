@@ -2,6 +2,7 @@ class MealsController < ApplicationController
 
   def index
     @today_meals = Meal.for_today
+    @order = Order.new
     # @filter_meals = Meal.find
 
 

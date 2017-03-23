@@ -1,0 +1,20 @@
+<div class="col s12 m6 l4">
+  <div class="card hoverable card-meal">
+    <div class="card-image white-text" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), url('<%= cl_image_path(meal.picture, :height => 215, :crop => :fill) %>');">
+      <div class="card-description-content">
+        <p class="uppercase"><%= meal.name %></p>
+        <p class="ultra-small">oeuf, salade, thon, olives, merguez</p>
+      </div>
+    </div>
+    <div class="card-bottom">
+      <div class="card-button-reserved">
+        <%= link_to "Je réserve", meal_orders_path(meal), method: :post, class: "waves-effect waves-light btn btn-small waves-green uppercase" %>
+      </div>
+      <div class="card-bottom-restaurant">
+      <div class="divider"></div>
+        <p class="name"><%= meal.restaurant.name %></p>
+        <p class="address"><%= meal.restaurant.address %> - <%= meal.restaurant.city.capitalize %></p>
+      </div>
+    </div>
+  </div>
+</div>
