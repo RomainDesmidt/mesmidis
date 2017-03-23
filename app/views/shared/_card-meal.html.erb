@@ -6,6 +6,7 @@
         <p class="ultra-small">oeuf, salade, thon, olives, merguez</p>
       </div>
     </div>
+    <div class="card-category-meal"><%= meal.category.name %></div>
     <div class="card-bottom">
       <div class="card-button-reserved">
         <%= link_to "réserver", meal_orders_path(meal), method: :post, class: "waves-effect waves-light btn btn-small waves-green uppercase" %>
