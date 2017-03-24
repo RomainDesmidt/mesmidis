@@ -11,4 +11,10 @@ class OrdersController < ApplicationController
 
     redirect_to meals_path
   end
+
+  def destroy
+    @order = Order.find(params[:id])
+    @order.destroy
+    redirect_to meals_path
+  end
 end

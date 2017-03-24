@@ -14,6 +14,14 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(name)
-    new_user_subscription_url
+
+    @subscription = UserSubscription.last.starting_on
+    # si l'utilisateur a un abonnement en cours on l'envoi sur la page meal
+    if @subscription == nil || @subscription + 30.day < Date.today
+      new_user_subscription_url
+    else
+      meals_path
+    end
+
   end
 end

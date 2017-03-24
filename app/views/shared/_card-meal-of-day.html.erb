@@ -1,20 +1,29 @@
-<div class="col s12 m6 l4">
-  <div class="card hoverable card-meal">
+<div class="col s12">
+<div class="flex-meal-of-day">
+  <div class="card hoverable card-meal-today">
     <div class="card-image white-text" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), url('<%= cl_image_path(@meal_reserved.meal.picture, :height => 215, :crop => :fill) %>');">
       <div class="card-description-content">
-        <p class="uppercase"><%= @meal_reserved.meal.name %></p>
+        <p class="uppercase name"><%= @meal_reserved.meal.name %></p>
         <p class="ultra-small">oeuf, salade, thon, olives, merguez</p>
       </div>
     </div>
     <div class="card-category-meal"><%= @meal_reserved.meal.category.name %></div>
     <div class="card-bottom">
       <div class="card-button-reserved">
-      </div>
-      <div class="card-bottom-restaurant">
-      <div class="divider"></div>
+
         <p class="name"><%= @meal_reserved.meal.restaurant.name %></p>
         <p class="address"><%= @meal_reserved.meal.restaurant.address %> - <%= @meal_reserved.meal.restaurant.city.capitalize %></p>
+
+
+
+      </div>
+
+      <div class="card-bottom-restaurant">
+      <div class="divider"></div>
+      <%= link_to 'annuler ma réservation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': 'JE CONFIRME','cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question'} %>
       </div>
     </div>
   </div>
 </div>
+</div>
+
