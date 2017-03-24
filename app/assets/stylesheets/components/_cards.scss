@@ -45,16 +45,17 @@
 .card-description-content {
   padding: 0px;
 }
-
+.card .card-description-content p {
+     letter-spacing: 1.1px;
+     line-height: 10px;
+    }
 .card .card-description-content .name {
   margin: 0;
   color: inherit;
   letter-spacing: 1.1px;
+  font-size: 25px;
 }
 
-.card .card-description-content p {
-     letter-spacing: 1.1px;
-    }
 .card-bottom {
   text-align: center;
   display: flex;
