@@ -13,8 +13,9 @@ Subscription.destroy_all
 ## Static data
 
 puts "Creating subscriptions..."
-Subscription.create!(price: 79, meals_count: 12, name: "12 repas", description: "Vous donne droit à 12 repas au cours du mois")
-Subscription.create!(price: 119, meals_count: 20, name: "20 repas", description: "Vous donne droit à 20 repas au cours du mois")
+Subscription.create!(price: 79, meals_count: 12, name: "Le Standard", description: "Vous donne droit à 12 repas au cours du mois")
+Subscription.create!(price: 119, meals_count: 20, name: "Le Garguantuesque", description: "Vous donne droit à 20 repas au cours du mois")
+Subscription.create!(price: 30, meals_count:5, name:"L'avant goût", description: "Découvrez mes midis pendant une semaine")
 
 puts "Creating categories..."
 ["Italien", "Marocain", "Asiatique", "Français"].each do |name|
