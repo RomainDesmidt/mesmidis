@@ -1,17 +1,11 @@
 <% if @meal_reserved == nil %>
 <div class="container">
-  <h2>Votre réservation du midi ? </h2>
+  <h2>Vous mangez quoi ce midi ? </h2>
 </div>
 <div class="media">
   <div class="media-body">
     <%= render 'shared/search-meal' %>
-    <div class="media-section">
-      <div class="row">
-        <!-- display meal order for the day -->
-      <% meal = @meal_reserved %>
-         <%= render 'shared/card-meal-of-day' %>
-      </div>
-    </div>
+
     <div class="media-section">
       <div class="row">
         <% @today_meals.each do |meal| %>
@@ -29,25 +23,20 @@
 
 <% else %>
 <div class="container">
-  <h2>Vous mangez quoi ce midi ? </h2>
+  <h2>Votre réservation du midi</h2>
 </div>
 <div class="media">
   <div class="media-body">
-    <%= render 'shared/search-meal' %>
-    <div class="media-section">
+    <% render 'shared/search-meal' %>
+<div class="media-section">
       <div class="row">
-
-
         <!-- display meal order for the day -->
+<div class="flex-meal-of-day">
+         <%= render 'shared/card-meal-of-day' %>
+         </div>
       </div>
     </div>
-    <div class="media-section">
-      <div class="row">
-        <% @today_meals.each do |meal| %>
-        <%= render 'shared/card-meal', meal: meal, order: @order %>
-        <% end %>
-      </div>
-    </div>
+
   </div>
   <div class="media-aside">
     <div class="media-section">
