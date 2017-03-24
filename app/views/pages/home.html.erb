@@ -10,9 +10,9 @@
       <%= image_tag "baseline-image.png", id: "baseline_image" %>
       <div class="btn-home">
          <% if user_signed_in? %>
-         <%= button_to "ACCEDER AUX PLATS DU JOUR ", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside", method: :get %>
+         <%= button_to "accèder à vos plats du jour", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
          <% else %>
-         <%= button_to "créer un compte", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
+         <%= button_to "tester mes midis", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
          <% end %>
        </div>
     </div>

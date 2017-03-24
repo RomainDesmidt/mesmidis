@@ -1,5 +1,6 @@
-<div class="col s12 m6 l4">
-  <div class="card hoverable card-meal">
+<div class="col s12">
+<div class="flex-meal-of-day">
+  <div class="card hoverable card-meal-today">
     <div class="card-image white-text" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), url('<%= cl_image_path(@meal_reserved.meal.picture, :height => 215, :crop => :fill) %>');">
       <div class="card-description-content">
         <p class="uppercase"><%= @meal_reserved.meal.name %></p>
@@ -9,6 +10,16 @@
     <div class="card-category-meal"><%= @meal_reserved.meal.category.name %></div>
     <div class="card-bottom">
       <div class="card-button-reserved">
+      Votre plat est réservé
+
+
+      <a class="waves-effect waves-light btn modal-trigger  light-blue" href="#cancel_meal">Annuler mon plat</a>
+      </div>
+      <div>
+
+      <button class="btn btn-message waves-effect waves-light">Try Me!</button>
+<pre class=" language-javascript"><code class=" language-javascript" data-language="javascript"><span class="token function">swal</span><span class="token punctuation">(</span><span class="token string">"Here's a message!"</span><span class="token punctuation">)</span></code></pre>
+
       </div>
       <div class="card-bottom-restaurant">
       <div class="divider"></div>
@@ -18,3 +29,13 @@
     </div>
   </div>
 </div>
+</div>
+<div id="cancel_meal" class="modal">
+    <div class="modal-content">
+      <h4 class="uppercase">Annuler ma réservation</h4>
+      <p><a href="/">lien</a></p>
+    </div>
+    <div class="modal-footer">
+      <%= link_to "confirmer mon annulation", order_path(@meal_reserved.id), method: :DELETE, class: "modal-action modal-close waves-effect waves-green btn-flat" %>
+    </div>
+  </div>

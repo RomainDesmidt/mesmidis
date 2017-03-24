@@ -11,7 +11,6 @@ class UserSubscriptionsController < ApplicationController
   def create
 
     @user_subscription = UserSubscription.new(user_subscription_params)
-    binding.pry
     @user_subscription.subscription = Subscription.find(params[:user_subscription][:subscription_id])
     @user_subscription.user = current_user
     @user_subscription.starting_on = Date.today
