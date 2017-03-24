@@ -22,3 +22,7 @@ fr:
         city: Ville
         zip_code: Code Postal
         phone_number: Numéro de téléphone
+  simple_form:
+    error_notification:
+      default_message: "Vérifiez vos coordonnées :"
+
