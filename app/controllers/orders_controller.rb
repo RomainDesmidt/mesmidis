@@ -1,7 +1,6 @@
 class OrdersController < ApplicationController
 
   def create
-    binding.pry
     @order = Order.new
     @order.meal = Meal.find(params[:meal_id])
     @order.time_slot = current_user.time_slot
