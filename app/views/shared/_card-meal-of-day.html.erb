@@ -10,32 +10,19 @@
     <div class="card-category-meal"><%= @meal_reserved.meal.category.name %></div>
     <div class="card-bottom">
       <div class="card-button-reserved">
-      Votre plat est réservé
-
-
-      <a class="waves-effect waves-light btn modal-trigger  light-blue" href="#cancel_meal">Annuler mon plat</a>
-      </div>
-      <div>
-
-      <button class="btn btn-message waves-effect waves-light">Try Me!</button>
-<pre class=" language-javascript"><code class=" language-javascript" data-language="javascript"><span class="token function">swal</span><span class="token punctuation">(</span><span class="token string">"Here's a message!"</span><span class="token punctuation">)</span></code></pre>
-
-      </div>
-      <div class="card-bottom-restaurant">
-      <div class="divider"></div>
         <p class="name"><%= @meal_reserved.meal.restaurant.name %></p>
         <p class="address"><%= @meal_reserved.meal.restaurant.address %> - <%= @meal_reserved.meal.restaurant.city.capitalize %></p>
+
+
+
+      </div>
+
+      <div class="card-bottom-restaurant">
+      <div class="divider"></div>
+      <%= link_to 'annuler ma réservation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': 'JE CONFIRME','cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question'} %>
       </div>
     </div>
   </div>
 </div>
 </div>
-<div id="cancel_meal" class="modal">
-    <div class="modal-content">
-      <h4 class="uppercase">Annuler ma réservation</h4>
-      <p><a href="/">lien</a></p>
-    </div>
-    <div class="modal-footer">
-      <%= link_to "confirmer mon annulation", order_path(@meal_reserved.id), method: :DELETE, class: "modal-action modal-close waves-effect waves-green btn-flat" %>
-    </div>
-  </div>
+
