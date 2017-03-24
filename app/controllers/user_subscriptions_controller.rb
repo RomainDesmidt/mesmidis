@@ -20,12 +20,11 @@ class UserSubscriptionsController < ApplicationController
   end
 
   def destroy
-
   end
 
   private
 
   def user_subscription_params
-    params.require(:user_subscription).permit(:user_id, :subscription_id, :starting_on)
+    params.require(:user_subscription).permit(:user_id, :subscription_id, :description, :starting_on)
   end
 end

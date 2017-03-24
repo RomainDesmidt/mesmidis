@@ -1,0 +1,28 @@
+.subscription-choice {
+  font-family: OstrichMedium;
+  text-align: center;
+  font-size: 45px;
+}
+
+.subscription-title {
+  color: white;
+  background-color: $brand-second-color;
+  border-radius: 4px;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+
+.subscription-price {
+  color: white;
+  background-color: $brand-second-color;
+  border-radius: 4px;
+  display: flex;
+  align-item: center;
+  justify-content: center;
+}
+
+.subscription-description img {
+  width: 30px;
+}
+
