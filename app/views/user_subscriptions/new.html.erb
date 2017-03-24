@@ -9,10 +9,10 @@
             <div class="col s4">
             <label for="<%= "user_subscription_subscription_id_#{subscription.id}" %>">
               <%= radio_button_tag "user_subscription[subscription_id]", subscription.id, checked = false ,options = {class: "hide-radio"} %>
-              <%= subscription.name  %><br>
-              Description:  <%= subscription.description %><br>
-              Nombre de repas:  <%= subscription.meals_count %><br>
-              Prix:  <%= subscription.price %>€
+              <h2 class="align-center"><%= subscription.name %></h2><br>
+              <p>Description:  <%= subscription.description %></p><br>
+              <p>Nombre de repas:  <%= subscription.meals_count %></p><br>
+              <h3>Prix:  <%= subscription.price %>€<h3>
             </label>
              </div>
           </div>
