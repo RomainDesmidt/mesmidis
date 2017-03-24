@@ -3,16 +3,24 @@
   <div class="row">
   <div class="col-s12">
     <%= simple_form_for @user_subscription do |f| %>
-      <%= label_tag "", "QUEL ABONNEMENT VOULEZ-VOUS CHOISIR ?" %>
+      <h3 class= "subscription-choice"> QUEL ABONNEMENT VOULEZ-VOUS CHOISIR ?</h3>
         <% @subscriptions.each do |subscription| %>
           <div class="subscription-card">
             <div class="col s4">
             <label for="<%= "user_subscription_subscription_id_#{subscription.id}" %>">
               <%= radio_button_tag "user_subscription[subscription_id]", subscription.id, checked = false ,options = {class: "hide-radio"} %>
-              <h2 class="align-center"><%= subscription.name %></h2><br>
-              <p>Description:  <%= subscription.description %></p><br>
-              <p>Nombre de repas:  <%= subscription.meals_count %></p><br>
-              <h3>Prix:  <%= subscription.price %>€<h3>
+              <div class="subscription-title">
+              <h3 class=><%= subscription.name %></h3>
+              <div class="divider"></div>
+              </div>
+              <div class="subscription-description ">
+              <p class= "center"><%= subscription.description %></p>
+              <p class='center'> <%= image_tag "icon_meal_red.png" %> <%= subscription.meals_count %> repas</p>
+              </div>
+              <br>
+              <div class="subscription-price">
+              <h4>Prix:  <%= subscription.price %> €<h4>
+              </div>
             </label>
              </div>
           </div>
