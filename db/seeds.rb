@@ -1,6 +1,7 @@
 puts "Cleaning database..."
 Order.destroy_all
 UserFoodPreference.destroy_all
+UserSubscription.destroy_all
 Restaurant.destroy_all
 Meal.destroy_all
 User.destroy_all
@@ -24,11 +25,11 @@ end
 ##################################################
 
 puts "Creating users..."
-thomas = User.create!(first_name: "Thomas", last_name: "Commercial", email: "thomas@gmail.com", password: "123456", password_confirmation: "123456", address: "32 rue Fouré", zip_code: "44000", city: "Nantes", phone_number: "0645234565", time_slot: "12")
+thomas = User.create!(first_name: "Thomas", last_name: "Commercial", email: "thomas@gmail.com", password: "123456", password_confirmation: "123456", address: "32 rue Fouré", zip_code: "44000", city: "Nantes", phone_number: "0645234565", time_slot: "12h00-12h15")
 
-karim = User.create!(first_name: "Karim", last_name: "Garcia", email: "karim_garcia@gmail.com", password: "654321", password_confirmation: "654321", address: "32 rue du Chateau", zip_code: "44000", city: "Nantes", phone_number: "0610203040", time_slot: "13")
+karim = User.create!(first_name: "Karim", last_name: "Garcia", email: "karim_garcia@gmail.com", password: "654321", password_confirmation: "654321", address: "32 rue du Chateau", zip_code: "44000", city: "Nantes", phone_number: "0610203040", time_slot: "13h00-13h15")
 
-cecile = User.create!(first_name: "Cecile", last_name: "Veneziani", email: "cecile@gmail.com", password: "135790", password_confirmation: "135790", address: "10 rue des Fleurs", zip_code: "44200", city: "Nantes", phone_number: "0615202530", time_slot: "12")
+cecile = User.create!(first_name: "Cecile", last_name: "Veneziani", email: "cecile@gmail.com", password: "135790", password_confirmation: "135790", address: "10 rue des Fleurs", zip_code: "44200", city: "Nantes", phone_number: "0615202530", time_slot: "13h30-13h45")
 
 # TODO: User food preferences
 
