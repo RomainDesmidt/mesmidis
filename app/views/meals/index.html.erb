@@ -1,17 +1,11 @@
+<% if @meal_reserved == nil %>
 <div class="container">
   <h2>Vous mangez quoi ce midi ? </h2>
 </div>
 <div class="media">
   <div class="media-body">
-
     <%= render 'shared/search-meal' %>
 
-    <div class="media-section">
-      <div class="row">
-                <!-- display meal order for the day -->
-
-      </div>
-    </div>
     <div class="media-section">
       <div class="row">
         <% @today_meals.each do |meal| %>
@@ -25,4 +19,29 @@
       <div id="map" style="width: 100%; height: 600px;"></div>
       <%= render '/shared/js-googlemap' %>
     </div>
+  </div>
+
+<% else %>
+<div class="container">
+  <h2>Votre réservation du midi</h2>
 </div>
+<div class="media">
+  <div class="media-body">
+    <% render 'shared/search-meal' %>
+<div class="media-section">
+      <div class="row">
+        <!-- display meal order for the day -->
+<div class="flex-meal-of-day">
+         <%= render 'shared/card-meal-of-day' %>
+         </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="media-aside">
+    <div class="media-section">
+      <div id="map" style="width: 100%; height: 600px;"></div>
+      <%= render '/shared/js-googlemap' %>
+    </div>
+  </div>
+  <% end %>

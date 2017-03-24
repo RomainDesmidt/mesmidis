@@ -14,6 +14,6 @@ class ApplicationController < ActionController::Base
   end
 
   def after_sign_in_path_for(name)
-    meals_url
+    new_user_subscription_url
   end
 end
