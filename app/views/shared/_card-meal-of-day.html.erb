@@ -20,8 +20,8 @@
 
       <div class="card-bottom-restaurant">
       <div class="divider"></div>
-      <% image-top = image_tag "icon_meal_red.png" %>
-      <%= link_to 'annuler ma réservation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': 'JE CONFIRME','cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question','image-url': image-top } %>
+
+      <%= link_to 'annuler ma réservation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': 'JE CONFIRME','cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question' } %>
       </div>
     </div>
   </div>
