@@ -21,19 +21,20 @@
   border-radius: 4px;
   letter-spacing: 0.5px;
 }
-.card-image {
-  text-align:center;
-}
+
 .card-meal {
-  height:350px;
-  width: 300px;
+  // height:350px;
+  // width: 300px;
+  height: 395px;
+  width: 345px;
 }
 .card-meal-today {
   height:550px;
   width: 450px;
 }
 .card-image {
-  height:215px;
+  // height:215px;
+  height: 260px;
   background-size: cover;
   background-position: center;
   text-align: center;
@@ -51,9 +52,11 @@
     }
 .card .card-description-content .name {
   margin: 0;
+  padding: 0px 5px;
   color: inherit;
   letter-spacing: 1.1px;
   font-size: 25px;
+  line-height: 24px;
 }
 
 .card-bottom {
@@ -67,7 +70,7 @@
   font-family:$base-font;
   letter-spacing: 0.5px;
   position: absolute;
-  top: 250px;
+  top: 290px;;
   text-weight:bold;
 }
 .card-button-reserved .btn-small {
@@ -98,45 +101,46 @@
   letter-spacing: 1.1px;
 
 }
-.card-category
-{
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  font-family:$base-font;
-  font-size: 12px;
-  text-transform: uppercase;
-  color:#ffffff;
-}
-.card-name {
-  color:$brand-color;
-  font-size:16px;
-  font-family:$base-font;
-  letter-spacing: 0.5px;
-  position: absolute;
-  top: 260px;
-  left:7px;
-  text-weight:bold;
-}
-.card-restaurant {
-  color:$gray;
-  font-size: 14px;
-  font-family:$base-font;
-  position: absolute;
-  bottom: 30px;
-}
-.card-address {
-  color:$gray-light;
-  font-size: 12px;
-  font-family:$base-font;
-  position: absolute;
-  bottom: 10px;
-}
+// to DELETE
+// .card-category
+// {
+//   position: absolute;
+//   top: 10px;
+//   left: 10px;
+//   font-family:$base-font;
+//   font-size: 12px;
+//   text-transform: uppercase;
+//   color:#ffffff;
+// }
+// .card-name {
+//   color:$brand-color;
+//   font-size:16px;
+//   font-family:$base-font;
+//   letter-spacing: 0.5px;
+//   position: absolute;
+//   top: 260px;
+//   left:7px;
+//   text-weight:bold;
+// }
+// .card-restaurant {
+//   color:$gray;
+//   font-size: 14px;
+//   font-family:$base-font;
+//   position: absolute;
+//   bottom: 30px;
+// }
+// .card-address {
+//   color:$gray-light;
+//   font-size: 12px;
+//   font-family:$base-font;
+//   position: absolute;
+//   bottom: 10px;
+// }
 
-.card-button {
-  font-family:$base-font;
-  letter-spacing: 0.5px;
-  position: absolute;
-  top: 260px;
-  text-weight:bold;
-}
+// .card-button {
+//   font-family:$base-font;
+//   letter-spacing: 0.5px;
+//   position: absolute;
+//   top: 260px;
+//   text-weight:bold;
+// }
