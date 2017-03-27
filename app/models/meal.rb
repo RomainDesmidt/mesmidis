@@ -12,8 +12,8 @@ class Meal < ApplicationRecord
       date += 1 + ((3-date.wday) % 7)
       day_name = date.strftime('%A').downcase
     else
-      day_name = Date.today.strftime('%A').downcase
-
+      # day_name = Date.today.strftime('%A').downcase
+      day_name = "friday"
     end
 
       select("meals.*, #{day_name}_meal_count as today_count").
