@@ -19,13 +19,15 @@
               </div>
               <br>
               <div class="subscription-price">
-              <h4>Prix:  <%= subscription.price %> €<h4>
+              <h4>Prix:<%= humanized_money(subscription.price) %>€<h4>
               </div>
             </label>
              </div>
           </div>
       <% end %>
-    <%= submit_tag("Abonnez vous", class: "form-submit-btn btn-unmarged") %>
+      <div class="center">
+        <%= submit_tag("S'abonner et payer", class: "form-submit-btn btn-unmarged uppercase") %>
+      </div>
     <% end %>
   </div>
   </div>
