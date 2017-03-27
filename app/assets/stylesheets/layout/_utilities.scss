@@ -76,6 +76,21 @@ text-transform: uppercase;
     padding-right: 20px;
 }
 
+//index meals
+.title-done {
+    background-color: #4CAF50 !important;
+    border-radius: 5px;
+    color: white;
+    }
+.content-meals {
+  position: relative;
+  margin-top: 60px;
+  min-height: 750px;
+  overflow-x: hidden;
+  width: 100%;
+}
+
+
 // Backgrounds
 .bg-black {
   background: #4a4a4a;
