@@ -48,7 +48,7 @@
 }
 .card .card-description-content p {
      letter-spacing: 1.1px;
-     line-height: 10px;
+     line-height: 100%;
     }
 .card .card-description-content .name {
   margin: 0;
@@ -74,12 +74,15 @@
   text-weight:bold;
 }
 .card-button-reserved .btn-small {
-    height: 30px;
-    line-height: 30px;
-    padding: 0 0.5rem;
-    width: 150px;
+  height: 30px;
+  line-height: 30px;
+  padding: 0 0.5rem;
+  width: 150px;
 }
-
+.ultra-small {
+  line-height: 100%;
+  padding: 0px 4px;
+}
 .card-bottom-restaurant {
   color:$gray;
   font-size: 12px;

@@ -4,7 +4,7 @@
     <div class="card-image white-text" style="background-image: linear-gradient(-225deg, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.2) 50%), url('<%= cl_image_path(@meal_reserved.meal.picture, :height => 215, :crop => :fill) %>');">
       <div class="card-description-content">
         <p class="uppercase name"><%= @meal_reserved.meal.name %></p>
-        <p class="ultra-small">oeuf, salade, thon, olives, merguez</p>
+        <p class="ultra-small"><%= @meal_reserved.meal.description %></p>
       </div>
     </div>
     <div class="card-bottom">

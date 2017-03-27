@@ -12,7 +12,6 @@
 
 ActiveRecord::Schema.define(version: 20170327143246) do
 
-
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -95,6 +94,12 @@ ActiveRecord::Schema.define(version: 20170327143246) do
     t.datetime "created_at",              null: false
     t.datetime "updated_at",              null: false
     t.integer  "price_cents", default: 0, null: false
+  end
+
+  create_table "time_slots", force: :cascade do |t|
+    t.string   "interval"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "user_food_preferences", force: :cascade do |t|
