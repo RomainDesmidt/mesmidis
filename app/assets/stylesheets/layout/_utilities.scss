@@ -90,7 +90,12 @@ text-transform: uppercase;
   width: 100%;
 }
 
-
+.annulation-meal {
+      margin-top: 20px;
+}
+.annulation-meal a {
+      color: $brand-second-color;
+}
 // Backgrounds
 .bg-black {
   background: #4a4a4a;
