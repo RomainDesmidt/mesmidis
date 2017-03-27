@@ -21,13 +21,17 @@
               <div class="subscription-price">
               <h4>Prix:<%= humanized_money(subscription.price) %>€<h4>
               </div>
+              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+                  data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
+                  data-name="Subscription for <%= subscription.name %>"
+                  data-email="<%= current_user.email %>"
+                  data-description="Subscription <%= subscription.description %>"
+                  data-amount="<%= subscription.price_cents %>"
+                  data-currency="<%= subscription.price.currency %>"></script>
             </label>
              </div>
           </div>
       <% end %>
-      <div class="center">
-        <%= submit_tag("S'abonner et payer", class: "form-submit-btn btn-unmarged uppercase") %>
-      </div>
     <% end %>
   </div>
   </div>

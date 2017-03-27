@@ -22,8 +22,7 @@ gem "gmaps4rails"
 gem 'rails-assets-sweetalert2', '~> 5.1.1', source: 'https://rails-assets.org'
 gem 'sweet-alert2-rails'
 gem 'money-rails', '~>1'
-gem 'stripe', :git => 'https://github.com/stripe/stripe-ruby'
-
+gem 'stripe'
 
 gem 'enumerize'
 
