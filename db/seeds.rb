@@ -110,7 +110,7 @@ la500_lasagne = Meal.create!(
 la500_spaghettis_bolognaise = Meal.create!(
   restaurant: la500,
   category: Category.find_by_name!("Italien"),
-  name: "Spaghettis bolognaise ",
+  name: "Spaghettis bolognaise ",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/la500_spaghettis_bolognaise.jpg"))
 )
 
@@ -149,7 +149,7 @@ lecoufourre_andouillette_pommes_de_terre = Meal.create!(
 lecoufourre_salade_saumon_tomates = Meal.create!(
   restaurant: lecoufourre,
   category: Category.find_by_name!("Français"),
-  name: "Salade au Saumon et tomates ",
+  name: "Salade au Saumon et tomates ",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lecoufourre_salade_saumon_tomates.jpg"))
 )
 
