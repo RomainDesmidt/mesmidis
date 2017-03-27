@@ -29,6 +29,8 @@ class UserSubscriptionsController < ApplicationController
       )
       current_user.update(stripe_customer_id: stripe_customer.id)
     end
+# Voir pour améliorer et supprimer la table subscription en la remplacant
+# par les plans au sein de stripe
 
     mapping_app_subscriptions_to_stripe_subscriptions = {
       "L'avant-goût" => "Sub1",

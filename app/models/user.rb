@@ -18,6 +18,10 @@ class User < ApplicationRecord
     self.orders.where(date: Date.today).first
   end
 
+  def full_address
+    "#{address}, #{zip_code}, #{city}"
+  end
+
 
   scope :for_today, -> do
     day_name = Date.today.strftime('%A').downcase

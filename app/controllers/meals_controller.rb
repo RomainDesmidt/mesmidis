@@ -22,6 +22,21 @@ class MealsController < ApplicationController
       end
     end
 
+
+    unless @meal_reserved.nil?
+      gmaps = GoogleMapsService::Client.new
+
+      origins =  [47.2161625, -1.5526961]
+      destinations = [@meal_reserved.restaurant.latitude, @meal_reserved.restaurant.longitude]
+      matrix = gmaps.distance_matrix(origins, destinations,
+        mode: 'walking',
+        language: 'fr-FR',
+        units: 'km')
+
+      @distance = matrix[:rows].first[:elements].first[:distance][:text]
+      @duration = matrix[:rows].first[:elements].first[:duration][:text]
+    end
+
   end
 
   def show
