@@ -1,30 +1,33 @@
-<div class="media-section">
-  <div class="row">
+<!-- <div class="media-section"> -->
+  <div class="row" style="margin-right: 20px;">
     <div class="col s8">
-      <div class="row">
-        <div class="input-field col s12">
+      <!-- <div class="row"> -->
+        <div class="input-field col s12" style="margin-top: 2rem;">
           <input id="city" type="text" class="validate" placeholder="<%= current_user.address %> <%= current_user.city %>">
-          <label class="active" for="city">adresse du pickup</label>
+          <label class="active" for="city">Vous mangez où ?</label>
         </div>
-      </div>
+      <!-- </div> -->
     </div>
     <div class="input-field col s4">
       <ul class="collapsible popout" data-collapsible="accordion">
         <li>
           <div class="collapsible-header"><i class="material-icons right">keyboard_arrow_down</i> Plus de filtres </div>
-          <div class="collapsible-body"><span>
+          <div class="collapsible-body">
+          <div class="row">
             <%= simple_form_for current_user, url: profile_path, method: :patch do |f| %>
-            <div class="valign-wrapper left-align">
-              <%= f.association :favorite_categories, as: :check_boxes, label: ""%>
+
+              <%= f.association :favorite_categories, as: :check_boxes, label: "", class: "col s6"%>
+              </div>
               <%= f.button :submit, '', class:"btn waves-effect waves-light btn" do %>
-              <i class="material-icons right">add</i>
+              <div class="col s12"><i class="material-icons">add</i></div>
               <% end %>
-            </div>
+
             <% end %>
-          </span></div>
+            </div>
+
         </li>
       </ul>
     </div>
   </div>
-</div>
+<!-- </div> -->
 
