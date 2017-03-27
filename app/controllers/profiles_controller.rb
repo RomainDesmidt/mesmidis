@@ -10,6 +10,9 @@ class ProfilesController < ApplicationController
   def update
     @user = current_user
     @user.update(user_params)
+    @coordinates_user = Geocoder.coordinates(@user.full_address)
+    @user.update(latitude: @coordinates_user[0], longitude: @coordinates_user[1])
+
   end
 
   private
