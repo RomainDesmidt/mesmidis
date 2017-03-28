@@ -1,3 +1,8 @@
+
+.subscription-card {
+  color: black;
+}
+
 .subscription-choice {
   font-family: OstrichMedium;
   text-align: center;
@@ -22,7 +27,15 @@
   justify-content: center;
 }
 
+.subscription-description {
+  border-left: 4px;
+}
+
 .subscription-description img {
   width: 30px;
 }
 
+.stripe_payment {
+  display: flex;
+  align-items: center;
+}

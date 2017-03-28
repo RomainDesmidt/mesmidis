@@ -1,39 +1,40 @@
 
 <div class="container">
   <div class="row">
-  <div class="col-s12">
-    <%= simple_form_for @user_subscription do |f| %>
+    <div class="col s12">
       <h3 class= "subscription-choice"> QUEL ABONNEMENT VOULEZ-VOUS CHOISIR ?</h3>
+
         <% @subscriptions.each do |subscription| %>
-          <div class="subscription-card">
+          <%= simple_form_for @user_subscription do |f| %>
             <div class="col s4">
-            <label for="<%= "user_subscription_subscription_id_#{subscription.id}" %>">
-              <%= radio_button_tag "user_subscription[subscription_id]", subscription.id, checked = false ,options = {class: "hide-radio"} %>
+            <div class="subscription-card">
               <div class="subscription-title">
-              <h3 class=><%= subscription.name %></h3>
-              <div class="divider"></div>
+                <h3 class=><%= subscription.name %></h3>
               </div>
               <div class="subscription-description ">
-              <p class= "center"><%= subscription.description %></p>
-              <p class='center'> <%= image_tag "icon_meal_red.png" %> <%= subscription.meals_count %> repas</p>
+                <p class= "center"><%= subscription.description %></p>
+                <p class='center'> <%= image_tag "icon_meal_red.png" %> <%= subscription.meals_count %> repas</p>
               </div>
-              <br>
               <div class="subscription-price">
-              <h4>Prix:<%= humanized_money(subscription.price) %>€<h4>
+                <h4>Prix:<%= humanized_money(subscription.price) %>€<h4>
               </div>
-              <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
+              <div class="stripe_payment">
+                <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
                   data-key="<%= Rails.configuration.stripe[:publishable_key] %>"
                   data-name="Subscription for <%= subscription.name %>"
                   data-email="<%= current_user.email %>"
                   data-description="Subscription <%= subscription.description %>"
                   data-amount="<%= subscription.price_cents %>"
-                  data-currency="<%= subscription.price.currency %>"></script>
-            </label>
-             </div>
-          </div>
-      <% end %>
-    <% end %>
-  </div>
+                  data-currency="<%= subscription.price.currency %>">
+                </script>
+              </div>
+            </div>
+            </div>
+            <%= f.hidden_field :subscription_id, :value => subscription.id %>
+          <% end %>
+        <% end %>
+      </div>
+
   </div>
 </div>
 
