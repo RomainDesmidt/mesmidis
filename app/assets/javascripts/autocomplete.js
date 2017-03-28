@@ -11,7 +11,19 @@ $(document).ready(function() {
     });
   }
 });
+$(document).ready(function() {
+  var address = $('#user_address_work').get(0);
 
+  if (address) {
+    var autocomplete = new google.maps.places.Autocomplete(address, { types: ['geocode'] });
+    google.maps.event.addListener(autocomplete, 'place_changed', onPlaceChanged);
+    google.maps.event.addDomListener(address, 'keydown', function(e) {
+      if (e.keyCode == 13) {
+        e.preventDefault(); // Do not submit the form on Enter.
+      }
+    });
+  }
+});
 function onPlaceChanged() {
   var place = this.getPlace();
   var components = getAddressComponents(place);

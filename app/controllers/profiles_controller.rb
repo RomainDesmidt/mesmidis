@@ -1,5 +1,10 @@
 class ProfilesController < ApplicationController
 
+  def new
+    @user = current_user
+  end
+
+
   def show
   end
 
@@ -14,7 +19,7 @@ class ProfilesController < ApplicationController
 
   private
   def user_params
-    params.require(:user).permit(:first_name, :last_name, :phone_number, :address, :zip_code, :city, :time_slot, favorite_category_ids: [])
+    params.require(:user).permit(:first_name, :last_name, :phone_number, :address, :address_work, :zip_code, :city, :time_slot, favorite_category_ids: [])
     # permitted_params[:time_slot] = permitted_params[:time_slot].to_i
     # permitted_params
   end
