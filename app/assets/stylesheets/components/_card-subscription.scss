@@ -1,12 +1,11 @@
-
 .subscription-card {
-  color: black;
+  margin-top: 35px;
 }
-
 .subscription-choice {
   font-family: OstrichMedium;
   text-align: center;
   font-size: 45px;
+  margin-top: 40px;
 }
 
 .subscription-title {
@@ -36,6 +35,7 @@
 }
 
 .stripe_payment {
-  display: flex;
-  align-items: center;
+  text-align: center;
+  margin-top: 20px;
 }
+
