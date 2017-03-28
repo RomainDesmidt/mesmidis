@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   devise_for :restaurants
   devise_for :users
 
-  resource :profile, only: [:show, :edit, :update]
+  resource :profile, only: [:new, :show, :edit, :update]
 
   # resources :subscriptions, only: [] do
   #   resources :user_subscriptions, only: [:create]

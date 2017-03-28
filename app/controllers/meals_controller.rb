@@ -11,6 +11,20 @@ class MealsController < ApplicationController
         marker.lat meal.restaurant.latitude
         marker.lng meal.restaurant.longitude
         marker.infowindow "#{meal.restaurant.name}"
+        marker.picture({
+    url: "http://res.cloudinary.com/mesmidis/image/upload/v1490694579/static-mesmidis/marker-restaurant.png",
+    width: 48,
+    height: 48,
+})
+      end
+        @hash += Gmaps4rails.build_markers(@user) do |meal, marker,info|
+        marker.lat @user.latitude
+        marker.lng @user.longitude
+        marker.picture({
+    url: "http://res.cloudinary.com/mesmidis/image/upload/v1490694964/static-mesmidis/marker-user.png",
+    width: 48,
+    height: 48,
+})
         #marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
       end
 
@@ -18,15 +32,28 @@ class MealsController < ApplicationController
 
 
     unless @meal_reserved.nil?
+      #  marker restaurant
       @hash = Gmaps4rails.build_markers(@meal_reserved) do |meal, marker,info|
         marker.lat meal.restaurant.latitude
         marker.lng meal.restaurant.longitude
         marker.infowindow "#{meal.restaurant.name}"
+        marker.picture({
+    url: "http://res.cloudinary.com/mesmidis/image/upload/v1490694579/static-mesmidis/marker-restaurant.png",
+    width: 48,
+    height: 48,
+})
+
       end
         #marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
+      # maker user
       @hash += Gmaps4rails.build_markers(@user) do |meal, marker,info|
         marker.lat @user.latitude
         marker.lng @user.longitude
+        marker.picture({
+    url: "http://res.cloudinary.com/mesmidis/image/upload/v1490694964/static-mesmidis/marker-user.png",
+    width: 48,
+    height: 48,
+})
       end
         # marker.infowindow "#{meal.restaurant.name}"
         #marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })

@@ -10,6 +10,7 @@
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css">
+    <%= favicon_link_tag %>
     <script src="https://use.typekit.net/gcr8wpv.js"></script>
     <script>try{Typekit.load({ async: true });}catch(e){}</script>
     <%= stylesheet_link_tag    'application', media: 'all' %>
@@ -29,7 +30,7 @@
   </div>
   </main>
     <%= javascript_include_tag 'application' %>
-    <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV["GOOGLE_API_BROWSER_KEY"]}" %>
+    <%= javascript_include_tag "https://maps.google.com/maps/api/js?libraries=places&key=#{ENV["GOOGLE_API_GEOCODING_KEY"]}" %>
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/markerclusterer/src/markerclusterer_compiled.js" %>
     <%= javascript_include_tag "https://cdn.rawgit.com/printercu/google-maps-utility-library-v3-read-only/master/infobox/src/infobox_packed.js" %>
 

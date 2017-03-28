@@ -62,7 +62,7 @@ cantina_spaghettis_bolognaise = Meal.create!(
   restaurant: cantina,
   category: Category.find_by_name!("Italien"),
   name: "Spaghetti bolognaise",
-  description: "Spaghettis, viande haché, carottes, coulis de tomate, céleri, ail, huile d'olive",
+  description: "Spaghettis, viande hachée, carottes, coulis de tomate, céleri, ail, huile d'olive",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/cantina_spaghettis_bolognaise.jpg"))
 )
 
@@ -74,7 +74,7 @@ rafael_couscous = Meal.create!(
   restaurant: rafael,
   category: Category.find_by_name!("Méditerranéen"),
   name: "Couscous",
-  description: "Morceau d'agneau, 1 merguez , semoule, navets, courgettes.",
+  description: "Agneau, merguez, semoule, légumes.",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/rafael_couscous.jpg"))
 )
 
@@ -98,7 +98,7 @@ alain_pave_de_saumon = Meal.create!(
   restaurant: alain,
   category: Category.find_by_name!("Méditerranéen"),
   name: "Pavé de Saumon",
-  description: "1 pavé de saumon, tomates, salade",
+  description: "Pavé de saumon, tomates, salade",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/alain_pave_de_saumon.jpg"))
 )
 
@@ -110,7 +110,7 @@ coteplage_quiche_lorraine = Meal.create!(
   restaurant: coteplage,
   category: Category.find_by_name!("Latin"),
   name: "Quiche lorraine",
-  description: "Pâte brisée, lardons fumés, dès jambon blanc, gruyère rapé, oeuf",
+  description: "Pâte brisée, lardons fumés, jambon blanc, gruyère, oeuf, crème fraîche",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/coteplage_quiche_lorraine.jpg"))
 )
 
@@ -122,7 +122,7 @@ legressin_lasagne = Meal.create!(
   restaurant: legressin,
   category: Category.find_by_name!("Italien"),
   name: "Lasagne Bio",
-  description: "pâte à lasagne, viande haché, chair a saucisse, purée de tomates",
+  description: "Pâte à lasagne, boeuf, chair à saucisse, purée de tomates",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/legressin_lasagne.jpg"))
 )
 
@@ -134,7 +134,7 @@ lepetitquiafait_hachis_parmentier = Meal.create!(
   restaurant: lepetitquiafait,
   category: Category.find_by_name!("Latin"),
   name: "hachis parmentier",
-  description: "Pommes de terre, viande haché, oignons, persil, oeuf",
+  description: "Pommes de terre, boeuf, oignons, persil, oeuf",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lepetitquiafait_hachis_parmentier.jpg"))
 )
 
@@ -172,7 +172,7 @@ totum_buddha_bowl = Meal.create!(
   restaurant: totum,
   category: Category.find_by_name!("Végétarien"),
   name: "Buddha bowl",
-  description: "Tofu, pois, brocoli, riz, salade, curry",
+  description: "Tofu, pois, brocolis, riz, salade, curry",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/totum_buddha_bowl.jpg"))
 )
 
@@ -193,7 +193,7 @@ ylang_chicken_pad = Meal.create!(
   restaurant: ylang,
   category: Category.find_by_name!("Asiatique"),
   name: "Chicken pad",
-  description: "Nouille de riz plat, poulet, haricot frais, oignons, sauce pimentée",
+  description: "Nouilles de riz plat, poulet, haricots frais, oignons, sauce pimentée",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/ylang_chicken_pad.jpg"))
 )
 

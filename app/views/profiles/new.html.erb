@@ -1,0 +1,52 @@
+<div class="wrapper">
+  <h2 class="center-align">Mon Profil</h2>
+  <div class="container" >
+    <div class= "row">
+      <div class="offset-s2 col s8 offset-s2 center-align" >
+        <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+
+          <div class="card_preferences">
+            <h5 class="left-align">Mes Préférences de midis</h5>
+                <div class="row">
+                  <div class="input-field col s12">
+                    <%=f.input :address_work, id: "address-autocomplete",  label: "adresse de travail" %>
+                  </div>
+                </div>
+
+                <!-- BAD STYLE -->
+                <!-- need refactoring, but with Materialize, don't know how to use simple_form to handle this one -->
+                <div class="row">
+                <div class="input-field col s12">
+
+                  <%= f.select :time_slot, User.time_slot.values %>
+                  <label>Créneau Horaire (possibilité de le changer)</label>
+                </div>
+                </div>
+                <!-- BAD STYLE -->
+
+                 <div class="row">
+            <!--     <div class="card_food_preferences">
+                   <div class="col s12">-->
+                    <div class="valign-wrapper left-align">
+                      <%= f.association :favorite_categories, as: :check_boxes %>
+                    </div>
+                   </div>
+                <!-- </div>
+                </div> -->
+
+            <%= button_tag(type: 'submit', class:"btn waves-effect waves-light btn-large")do %>
+            <i class="material-icons right">send</i> Mettre à jour
+          </div>
+          <% end %>
+          </div>
+        <%end%>
+      </div>
+    </div>
+  </div>
+</div>
+          <form>
+            CHERCHE LES RESTOS PROCHE DE VOUS<input placeholder="Tapez votre adresse" id="addreZss-autocomplete" type="text" name="address"><br>
+            <button id="map-search" class="btn waves-effect waves-light">rechercher</button>
+          </form>
+
+
