@@ -21,24 +21,6 @@
                     <%=f.input :phone_number, input_html: { "data-length" => 12 } %>
                   </div>
                 </div>
-                <!-- <div class="row">
-                  <div class="input-field col s12">
-                    <%=f.input :address %>
-                  </div>
-                </div> -->
-                 <!-- <div class="row">
-                  <div class="input-field col s6">
-                    <%=f.input :zip_code %>
-                  </div>
-                  <div class="input-field col s6">
-                    <%=f.input :city %>
-                  </div>
-                </div> -->
-              </div>
-            </div>
-          </div>
-          <div class="card_preferences">
-            <h5 class="left-align">Mes Préférences</h5>
                 <div class="row">
                   <div class="input-field col s12">
                     <%=f.input :address %>
@@ -52,6 +34,17 @@
                     <%=f.input :city %>
                   </div>
                 </div>
+              </div>
+            </div>
+          </div>
+          <div class="card_preferences">
+            <h5 class="left-align">Mes Préférences de midis</h5>
+                <div class="row">
+                  <div class="input-field col s12 active">
+                    <%=f.input :address_work, id: "address-autocomplete", label: false%>
+                    <label style="font-size: 1rem;padding-left: 10px;">adresse de travail</label>
+                  </div>
+                </div>
 
                 <!-- BAD STYLE -->
                 <!-- need refactoring, but with Materialize, don't know how to use simple_form to handle this one -->
@@ -59,7 +52,7 @@
                 <div class="input-field col s12">
 
                   <%= f.select :time_slot, User.time_slot.values %>
-                  <label>Créneau Horaire</label>
+                  <label style="font-size: 1rem;padding-left: 10px;">Créneau Horaire par défaut</label>
                 </div>
                 </div>
                 <!-- BAD STYLE -->
@@ -75,7 +68,7 @@
                 </div> -->
 
             <%= button_tag(type: 'submit', class:"btn waves-effect waves-light btn-large")do %>
-            <i class="material-icons right">send</i> Mettre à jour
+           Je mets à jour mon profil midi
           </div>
           <% end %>
           </div>

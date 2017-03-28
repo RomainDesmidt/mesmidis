@@ -1,6 +1,7 @@
 class UserSubscriptionsController < ApplicationController
 
   def index
+    @user = current_user
   end
 
   def new
@@ -17,7 +18,7 @@ class UserSubscriptionsController < ApplicationController
     @user_subscription.starting_on = Date.today
 
     unless @user_subscription.save
-      redirect_to new_user_subscription_path
+      redirect_to new_profil_path
     end
 
 

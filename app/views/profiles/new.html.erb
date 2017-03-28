@@ -3,13 +3,14 @@
   <div class="container" >
     <div class= "row">
       <div class="offset-s2 col s8 offset-s2 center-align" >
-        <%= simple_form_for @user, url: profile_path, method: :patch do |f| %>
+        <%= simple_form_for @user, url: profile_path(source: "profile/new"), method: :patch do |f| %>
 
           <div class="card_preferences">
             <h5 class="left-align">Mes Préférences de midis</h5>
                 <div class="row">
-                  <div class="input-field col s12">
-                    <%=f.input :address_work, id: "address-autocomplete",  label: "adresse de travail" %>
+                  <div class="input-field col s12 active">
+                    <%=f.input :address_work, id: "address-autocomplete", label: false%>
+                    <label style="font-size: 1rem;padding-left: 10px;">adresse de travail</label>
                   </div>
                 </div>
 
@@ -19,7 +20,7 @@
                 <div class="input-field col s12">
 
                   <%= f.select :time_slot, User.time_slot.values %>
-                  <label>Créneau Horaire (possibilité de le changer)</label>
+                  <label style="font-size: 1rem;padding-left: 10px;">Créneau Horaire par défaut</label>
                 </div>
                 </div>
                 <!-- BAD STYLE -->
@@ -35,7 +36,7 @@
                 </div> -->
 
             <%= button_tag(type: 'submit', class:"btn waves-effect waves-light btn-large")do %>
-            <i class="material-icons right">send</i> Mettre à jour
+           Je mets à jour mon profil midi
           </div>
           <% end %>
           </div>
@@ -44,9 +45,3 @@
     </div>
   </div>
 </div>
-          <form>
-            CHERCHE LES RESTOS PROCHE DE VOUS<input placeholder="Tapez votre adresse" id="addreZss-autocomplete" type="text" name="address"><br>
-            <button id="map-search" class="btn waves-effect waves-light">rechercher</button>
-          </form>
-
-

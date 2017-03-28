@@ -22,11 +22,11 @@ class User < ApplicationRecord
   end
 
   def full_address
-    "#{address}, #{zip_code}, #{city}"
+    "#{address_work}"
   end
 
   def full_address_changed?
-    address_changed? || zip_code_changed? || city_changed?
+    address_work_changed?
   end
 
 
