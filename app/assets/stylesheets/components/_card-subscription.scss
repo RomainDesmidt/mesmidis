@@ -1,7 +1,11 @@
+.subscription-card {
+  margin-top: 35px;
+}
 .subscription-choice {
   font-family: OstrichMedium;
   text-align: center;
   font-size: 45px;
+  margin-top: 40px;
 }
 
 .subscription-title {
@@ -22,7 +26,16 @@
   justify-content: center;
 }
 
+.subscription-description {
+  border-left: 4px;
+}
+
 .subscription-description img {
   width: 30px;
+}
+
+.stripe_payment {
+  text-align: center;
+  margin-top: 20px;
 }
 

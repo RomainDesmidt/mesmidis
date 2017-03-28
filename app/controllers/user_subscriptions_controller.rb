@@ -2,6 +2,13 @@ class UserSubscriptionsController < ApplicationController
 
   def index
     @user = current_user
+    @user_subscription = UserSubscription.where(user_id: @user.id)
+    if @user_subscription == []
+     redirect_to new_user_subscription_path
+    else
+      @subscription = Subscription.where(id: @user_subscription.last.subscription_id)
+    end
+
   end
 
   def new
@@ -12,6 +19,7 @@ class UserSubscriptionsController < ApplicationController
   def create
     @user_subscription              = UserSubscription.new(user_subscription_params)
     @user_subscription.subscription = Subscription.find(params[:user_subscription][:subscription_id])
+    binding.pry
     @user_subscription.user         = current_user
     @user_subscription.status       = "pending"
 
