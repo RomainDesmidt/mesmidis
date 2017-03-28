@@ -19,6 +19,7 @@ class UserSubscriptionsController < ApplicationController
   def create
     @user_subscription              = UserSubscription.new(user_subscription_params)
     @user_subscription.subscription = Subscription.find(params[:user_subscription][:subscription_id])
+    binding.pry
     @user_subscription.user         = current_user
     @user_subscription.status       = "pending"
 

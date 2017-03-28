@@ -1,12 +1,6 @@
 <div class="banner">
   <div class="row">
     <div id="baseline-banner", class="col s7">
- <!--      <div>
-      <h1>OFFREZ-VOUS</h1>
-      <h1><span style="font-family: OstrichSansInline;font-size: 100px;">LE RESTO</span></h1>
-      <h1>CHAQUE MIDI</h1>
-      <h1><span style="font-family:OstrichSansInline;font-size: 100px;">POUR 6 €</span></h1>
-      </div> -->
       <%= image_tag "baseline-image.png", id: "baseline_image" %>
       <div class="btn-home">
          <% if user_signed_in? %>
@@ -74,7 +68,7 @@
       <div class="row">
         <div class="col s6">
           <form>
-            CHERCHE LES RESTOS PROCHE DE VOUS<input placeholder="Tapez votre adresse" id="address-autocomplete" type="text" name="address"><br>
+            TROUVEZ LES RESTOS PROCHE DE VOUS<input placeholder="Tapez votre adresse" id="address-autocomplete" type="text" name="address"><br>
             <button id="map-search" class="btn waves-effect waves-light">rechercher</button>
           </form>
         </div>
