@@ -10,7 +10,7 @@ Rails.application.routes.draw do
   #   resources :user_subscriptions, only: [:create]
   # end
 
-  resources :user_subscriptions, only: [:new, :create, :destroy]
+  resources :user_subscriptions, only: [:index, :new, :create, :destroy]
 
   resources :restaurants
 

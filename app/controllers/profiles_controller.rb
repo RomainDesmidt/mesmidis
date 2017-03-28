@@ -4,7 +4,6 @@ class ProfilesController < ApplicationController
     @user = current_user
   end
 
-
   def show
   end
 
@@ -13,8 +12,16 @@ class ProfilesController < ApplicationController
   end
 
   def update
+    source = params[:source]
+
     @user = current_user
     @user.update(user_params)
+
+    if source == "profile/new"
+      redirect_to meals_path
+    else
+      redirect_to user_subscriptions_path
+    end
   end
 
   private
