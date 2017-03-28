@@ -1,6 +1,10 @@
 class MealsController < ApplicationController
   def index
     @user = current_user
+    @user_subscription = UserSubscription.where(user_id: @user.id)
+    if @user_subscription == []
+     redirect_to new_user_subscription_path
+    end
     @today_meals = Meal.for_today
     @order = Order.new
     # @filter_meals = Meal.find
