@@ -19,14 +19,14 @@ class UserSubscriptionsController < ApplicationController
   def create
     @user_subscription              = UserSubscription.new(user_subscription_params)
     @user_subscription.subscription = Subscription.find(params[:user_subscription][:subscription_id])
-    binding.pry
+
     @user_subscription.user         = current_user
     @user_subscription.status       = "pending"
 
     @user_subscription.starting_on = Date.today
 
     unless @user_subscription.save
-      redirect_to new_profil_path
+      redirect_to new_user_subscription_path
     end
 
 
@@ -55,7 +55,7 @@ class UserSubscriptionsController < ApplicationController
 
     @user_subscription.update(payment: stripe_subscription.to_json, status: "paid")
     flash[:notice] = "Votre souscription a bien été enregistrée! Merci!"
-    redirect_to profile_path
+    redirect_to new_profile_path
 
   rescue Stripe::CardError => e
     flash[:error] = e.message
