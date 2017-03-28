@@ -1,2 +1,19 @@
-<h1>UserSubscriptions#index</h1>
-<p>MY ACCOUNT</p>
+<div class="wrapper">
+  <h2 class="center-align">Mon compte</h2>
+  <div class="container" >
+    <div class= "row">
+      <div class="offset-s2 col s8 offset-s2 center-align" >
+        <% @user_subscription.each do |subscription| %>
+        <% date_end = subscription.starting_on + 30.days %>
+        <p>votre abonnement a commencé le <%= subscription.starting_on.strftime("%d/%m/%Y") %></p>
+        <p>il finit le <%= date_end.strftime("%d/%m/%Y") %></p>
+
+        <% end %>
+        <% @subscription.each do |subscription| %>
+        <p>vous avez choisi l'abonnement : <%= subscription.name %> </p>
+        <% end %>
+        <%= link_to "modifier mes préférences", edit_profile_path %>
+      </div>
+    </div>
+  </div>
+</div>
