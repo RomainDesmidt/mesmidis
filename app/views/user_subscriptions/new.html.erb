@@ -7,7 +7,7 @@
         <% @subscriptions.each do |subscription| %>
           <%= simple_form_for @user_subscription do |f| %>
             <div class="col s4">
-            <div class="subscription-card">
+            <div class="subscription-card card">
               <div class="subscription-title">
                 <h3 class=><%= subscription.name %></h3>
               </div>
@@ -16,7 +16,7 @@
                 <p class='center'> <%= image_tag "icon_meal_red.png" %> <%= subscription.meals_count %> repas</p>
               </div>
               <div class="subscription-price">
-                <h4>Prix:<%= humanized_money(subscription.price) %>€<h4>
+                <h5>Prix:<%= humanized_money(subscription.price) %>€<h5>
               </div>
               <div class="stripe_payment">
                 <script src="https://checkout.stripe.com/checkout.js" class="stripe-button"
@@ -27,6 +27,14 @@
                   data-amount="<%= subscription.price_cents %>"
                   data-currency="<%= subscription.price.currency %>">
                 </script>
+                <script>
+        // Hide default stripe button, be careful there if you
+        // have more than 1 button of that class
+        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
+        document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
+        document.getElementsByClassName("stripe-button-el")[2].style.display = 'none';
+    </script>
+    <%= f.button :submit, "Acheter" %>
               </div>
             </div>
             </div>
