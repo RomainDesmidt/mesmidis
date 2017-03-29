@@ -3,8 +3,8 @@
     <div class="col s8">
       <!-- <div class="row"> -->
         <div class="input-field col s12" style="margin-top: 2rem;">
-          <input id="city" type="text" class="validate" placeholder="<%= current_user.address_work %>">
-          <label class="active" for="city">Vous mangez où ?</label>
+          <input id="address_work" type="text" class="validate" placeholder="<%= current_user.address_work %>">
+          <label class="active" for="address_work">Vous mangez où ?</label>
         </div>
       <!-- </div> -->
     </div>
@@ -12,6 +12,7 @@
       <ul class="collapsible popout" data-collapsible="accordion">
         <li>
           <div class="collapsible-header"><i class="material-icons right">keyboard_arrow_down</i> Plus de filtres </div>
+          <div>un calque</div>
           <div class="collapsible-body">
           <div class="row">
             <%= simple_form_for current_user, url: profile_path, method: :patch do |f| %>

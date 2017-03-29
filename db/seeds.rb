@@ -22,7 +22,7 @@ Subscription.create!(price: 119, meals_count: 20, name: "Le Gargantuesque", desc
 
 
 puts "Creating categories..."
-["Américain", "Asiatique", "Latin", "Méditerranéen", "Italien", "Végétarien"].each do |name|
+["Américain", "Asiatique", "Français", "Méditerranéen", "Italien", "Végétarien"].each do |name|
   Category.create!(name: name)
 end
 
@@ -108,7 +108,7 @@ alain.update!(
 
 coteplage_quiche_lorraine = Meal.create!(
   restaurant: coteplage,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "Quiche lorraine",
   description: "Pâte brisée, lardons fumés, jambon blanc, gruyère, oeuf, crème fraîche",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/coteplage_quiche_lorraine.jpg"))
@@ -132,7 +132,7 @@ legressin.update!(
 
 lepetitquiafait_hachis_parmentier = Meal.create!(
   restaurant: lepetitquiafait,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "hachis parmentier",
   description: "Pommes de terre, boeuf, oignons, persil, oeuf",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lepetitquiafait_hachis_parmentier.jpg"))
@@ -145,7 +145,7 @@ lepetitquiafait.update!(
 
 maisonbaron_andouillette_pommes_de_terre = Meal.create!(
   restaurant: maisonbaron,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "Andouillette royale",
   description: "Andouillette, pommes de terre, fromage rapé, moutarde",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/maisonbaron_andouillette_pommes_de_terre.jpg"))
@@ -232,7 +232,7 @@ lecomptoir_crevettes_sichuan = Meal.create!(
 
 lecomptoir_pave_de_saumon = Meal.create!(
   restaurant: lecomptoir,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "Pavé de Saumon",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lecomptoir_pave_de_saumon.jpg"))
 )
@@ -256,7 +256,7 @@ la500 = Restaurant.create!(
 
 la500_quiche_lorraine = Meal.create!(
   restaurant: la500,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "Quiche Lorraine",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/la500_quiche_lorraine.jpg"))
 )
@@ -295,14 +295,14 @@ lecoufourre = Restaurant.create!(
 
 lecoufourre_hachis_parmentier = Meal.create!(
   restaurant: lecoufourre,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "Hachis parmentier",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lecoufourre_hachis_parmentier.jpg"))
 )
 
 lecoufourre_andouillette_pommes_de_terre = Meal.create!(
   restaurant: lecoufourre,
-  category: Category.find_by_name!("Latin"),
+  category: Category.find_by_name!("Français"),
   name: "Andouillette Pommes de terre",
   picture: File.new(Rails.root.join("db/fixtures/images/meals/lecoufourre_andouillette_pommes_de_terre.jpg"))
 )
