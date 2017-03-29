@@ -14,13 +14,13 @@ src:  font-url('ostrichsans-medium-webfont.woff') format('woff');
 
 @font-face {
 font-family: "OstrichSansInline";
-src:  local('OstrichSansInline-Regular.otf'), url('OstrichSansInline-Regular.otf');
+src:  font-url('OstrichSansInline-Regular.otf'), font-url('OstrichSansInline-Regular.otf');
 }
 
 @font-face {
 font-family: "OstrichBlack";
 // src: local('Hero'), url("Hero.otf");
- src: local("OstrichSans-Black.otf"), url("OstrichSans-Black.otf");
+ src: font-url("OstrichSans-Black.otf"), font-url("OstrichSans-Black.otf");
 // src: font-url('Hero-Light.otf');ostrich-black-webfont.woff
 //   src: font-url('FontFile.eot?#iefix') format('embedded-opentype'),
 //        font-url('FontFile.ttf') format('truetype')
