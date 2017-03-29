@@ -4,13 +4,29 @@ class MealsController < ApplicationController
     @user_subscription = UserSubscription.where(user_id: @user.id)
 
     # on verifie si l'utilisateur a une subscription sinon on le redirige vers le paiement
-    if @user_subscription == []
+    if @user_subscription.empty?
       redirect_to new_user_subscription_path
     end
 
     # en provenance du search-bar : meals_path
 
-    @today_meals = Meal.for_today
+    # favourite_category_id : preference
+    # favourite_category_id : search
+    # favourite_category_id : pas de sélection dans les 2 cas
+    if params[:search].nil? || params[:search][:favorite_category_ids] == [""]
+      favorite_category_ids = current_user.favorite_categories.pluck(:id)
+      @today_meals = Meal.for_today.where(category_id: favorite_category_ids)
+    else
+      #  delete first empty element from favorite_category_ids
+      favorite_category_ids = params[:search][:favorite_category_ids]
+      favorite_category_ids.shift
+      @today_meals = Meal.for_today.where(category_id: favorite_category_ids)
+    end
+
+    if @today_meals.length <= 3 # can't use SQL count here
+      @other_meals = Meal.for_today.where.not(category_id: favorite_category_ids)
+    end
+
     @order = Order.new
     # @filter_meals = Meal.find
     @meal_reserved = current_user.order_made_today

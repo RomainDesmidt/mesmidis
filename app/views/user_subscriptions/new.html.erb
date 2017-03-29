@@ -27,14 +27,8 @@
                   data-amount="<%= subscription.price_cents %>"
                   data-currency="<%= subscription.price.currency %>">
                 </script>
-                <script>
-        // Hide default stripe button, be careful there if you
-        // have more than 1 button of that class
-        document.getElementsByClassName("stripe-button-el")[0].style.display = 'none';
-        document.getElementsByClassName("stripe-button-el")[1].style.display = 'none';
-        document.getElementsByClassName("stripe-button-el")[2].style.display = 'none';
-    </script>
-    <%= f.button :submit, "Acheter" %>
+
+                <%= f.button :submit, "Acheter" %>
               </div>
             </div>
             </div>
@@ -46,4 +40,11 @@
   </div>
 </div>
 
+<% content_for :after_js do %>
+  <script type="text/javascript">
+    $(document).ready(function() {
+      $('.stripe-button-el').hide();
+    });
+  </script>
+<% end %>
 
