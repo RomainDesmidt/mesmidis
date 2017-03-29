@@ -4,7 +4,7 @@ class ApplicationController < ActionController::Base
   before_action :configure_permitted_parameters, if: :devise_controller?
 
   def default_url_options
-    { host: ENV["www.mesmidis.com"] || "localhost:3000" }
+    { host: ENV["HOST"] || "localhost:3000" }
   end
 
   private
