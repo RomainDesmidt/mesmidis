@@ -33,8 +33,9 @@
 
 .subscription-description {
   padding: 10px;
-  p {
+  p:nth-child(2) {
     text-align: center;
+    height: 7vh;
   }
   img {
     width: 30px;

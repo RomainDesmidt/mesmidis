@@ -12,7 +12,7 @@ class UserSubscriptionsController < ApplicationController
   end
 
   def new
-    @subscriptions = Subscription.all
+    @subscriptions = Subscription.all.order(:id)
     @user_subscription = UserSubscription.new
   end
 
