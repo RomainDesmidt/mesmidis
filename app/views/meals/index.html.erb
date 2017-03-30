@@ -33,7 +33,7 @@
 
 
   <% else %>
-  <center>
+<center>
 <div class="row">
   <div class="col s12 m12">
     <h2 class="center title-done">Votre réservation du midi</h2>
@@ -53,12 +53,12 @@
   <!-- </div> -->
   <div class="col s12 m12">
     <div class="annulation-meal">
-    <%= link_to 'annuler ma réservation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': 'JE CONFIRME','cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question' } %>
+    <%= link_to 'annuler ma réservation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': "J'ANNULE MON PLAT",'cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question' } %>
       -
       <%= link_to 'me renvoyer un mail de confirmation', order_path(@meal_reserved.id), method: :delete, class: "uppercase", data: { confirm: 'Confirmez-vous votre annulation ?', 'confirm-button-text': 'JE CONFIRME','cancel-button-text': 'RETOUR','confirm-button-color': '#3FA9A7','sweet-alert-type': 'question' } %>
 
-      </div>
-  </div>
+     </div>
+    </div>
 </div>
 </center>
 <% end %>

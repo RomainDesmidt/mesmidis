@@ -8,17 +8,21 @@ footer{
 
 }
 .valign-wrapper {
-    justify-content: center;
+  justify-content: center;
 }
 
 .fa{
-font-size: 40px;
-padding: 0 15px;
+  font-size: 40px;
+  padding: 0 15px;
 }
 
 .fa:hover{
   color: $brand-second-color;
   font-size: xx-large;
+}
+
+h4 {
+  letter-spacing: 2px;
 }
 
 
