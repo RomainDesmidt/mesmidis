@@ -4,9 +4,9 @@
       <%= image_tag "baseline-image.png", id: "baseline_image" %>
       <div class="btn-home">
          <% if user_signed_in? %>
-         <%= button_to "accèder à vos plats du jour", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
+         <%= button_to "accédez à vos plats du jour", meals_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
          <% else %>
-         <%= button_to "tester mes midis", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
+         <%= button_to "testez mes midis", new_user_registration_path, id: "banner-button", class: "btn waves-effect waves-light btn-large btn-home-inside uppercase", method: :get %>
          <% end %>
        </div>
     </div>
@@ -49,7 +49,7 @@
           <%= image_tag "shopping-bag.png", class: "icons"%>
           </h2>
           <h3 class="center">EMPORTEZ</h3>
-          <p class="center-align">Venez retirer votre commande déja
+          <p class="center-align">Venez retirer votre commande déjà
           prête, en quelques minutes.</p>
         </div>
       </div>
@@ -68,7 +68,7 @@
       <div class="row">
         <div class="col s6">
           <form>
-            TROUVEZ LES RESTOS PROCHE DE VOUS<input placeholder="Tapez votre adresse" id="address-autocomplete" type="text" name="address"><br>
+            TROUVEZ LES RESTOS PROCHES DE VOUS<input placeholder="Tapez votre adresse" id="address-autocomplete" type="text" name="address"><br>
             <button id="map-search" class="btn waves-effect waves-light">rechercher</button>
           </form>
         </div>

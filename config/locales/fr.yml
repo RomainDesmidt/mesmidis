@@ -22,7 +22,7 @@ fr:
         city: Ville
         zip_code: Code Postal
         phone_number: Numéro de téléphone
-        favorite_categories: "Type de cuisine :"
+        favorite_categories: "Types de cuisine :"
         address_work: Adresse du midi
   simple_form:
     error_notification:

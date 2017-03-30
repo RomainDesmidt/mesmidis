@@ -54,7 +54,7 @@ class UserSubscriptionsController < ApplicationController
     )
 
     @user_subscription.update(payment: stripe_subscription.to_json, status: "paid")
-    flash[:notice] = "Votre souscription a bien été enregistrée! Merci!"
+    flash[:notice] = "Votre souscription a bien été enregistrée ! Merci."
     redirect_to new_profile_path
 
   rescue Stripe::CardError => e
