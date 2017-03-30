@@ -65,6 +65,7 @@ class MealsController < ApplicationController
     ########### DISPLAY TODAY'S MEALS #############
 
     unless @meal_reserved.nil?
+
       #  marker restaurant
       @hash = Gmaps4rails.build_markers(@meal_reserved) do |meal, marker,info|
         marker.lat meal.restaurant.latitude
@@ -88,7 +89,7 @@ class MealsController < ApplicationController
                          height: 48,
         })
       end
-
+# binding.pry
 
       gmaps = GoogleMapsService::Client.new
 
