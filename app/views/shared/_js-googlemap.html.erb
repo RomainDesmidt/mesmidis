@@ -14,12 +14,20 @@
           handler.getMap().setZoom(14);
         }
 
+      mealCards = [];
+      $(".card-meal").each(function(index){
+        mealCards.push($(this).data('id'));
+      });
 
+      $(".card-meal").mouseenter(function() {
+        markerIndex = mealCards.indexOf($(this).data('id'));
+        markers[markerIndex].serviceObject.setIcon ("http://res.cloudinary.com/mesmidis/image/upload/v1490882473/static-mesmidis/meal-restaurant-48-hover.png");
+      });
 
-$(".card-meal").on("mouseover", function() {
-      for (i = 0; i < markers.length; i++) {
-    markers[id].serviceObject.setIcon ("http://res.cloudinary.com/mesmidis/image/upload/v1490694964/static-mesmidis/marker-user.png");
-    }});
+      $(".card-meal").mouseleave(function() {
+        markerIndex = mealCards.indexOf($(this).data('id'));
+        markers[markerIndex].serviceObject.setIcon ("http://res.cloudinary.com/mesmidis/image/upload/v1490694964/static-mesmidis/marker-restaurant.png");
+      });
 
 
 
