@@ -31,7 +31,7 @@ class MealsController < ApplicationController
     end
 
     @order = Order.new
-    # @filter_meals = Meal.find
+
     @meal_reserved = current_user.order_made_today
 
 
@@ -49,6 +49,18 @@ class MealsController < ApplicationController
                          height: 48,
         })
     end
+      if @other_meals
+            @hash += Gmaps4rails.build_markers(@other_meals) do |meal, marker,info|
+              marker.lat meal.restaurant.latitude
+              marker.lng meal.restaurant.longitude
+              marker.infowindow "#{meal.restaurant.name}"
+              marker.picture({
+                           url: "http://res.cloudinary.com/mesmidis/image/upload/v1490694579/static-mesmidis/marker-restaurant.png",
+                           width: 48,
+                           height: 48,
+          })
+            end
+          end
 
 
       #  marker user
@@ -81,6 +93,7 @@ class MealsController < ApplicationController
         })
 
       end
+
       #marker.infowindow render_to_string(partial: "/flats/map_box", locals: { flat: flat })
       # maker user
       @hash += Gmaps4rails.build_markers(@user) do |meal, marker,info|
@@ -92,7 +105,6 @@ class MealsController < ApplicationController
                          height: 48,
         })
       end
-# binding.pry
 
       gmaps = GoogleMapsService::Client.new
 
