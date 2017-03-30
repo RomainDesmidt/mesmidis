@@ -79,10 +79,15 @@ background-color:white;
 }
 
 .padding-right {
-    padding-right: 20px;
+  padding-right: 20px;
 }
 
-
+.search_favorite_categories .label {
+  margin-bottom: 5px;
+}
+.collection_check_boxes {
+    padding-right: 14px;
+    }
 //index meals
 .title-done {
     background-color: $brand-second-color;
@@ -92,12 +97,32 @@ background-color:white;
 
 .content-meals {
   position: relative;
-  margin-top: 60px;
   min-height: 750px;
   overflow-x: hidden;
   width: 100%;
 }
+.collapsible-header img {
+  margin-top: 1%;
+  position: absolute;
+}
 
+.collapsible-header input {
+  width: 63%;
+  margin-left: 4%;
+  margin-top: 0.5%;
+}
+
+.filter-flex {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    justify-content: space-between;
+}
+.filter-flex-button {
+  flex: 0 0 30%;
+  text-align: center;
+
+}
 .annulation-meal {
       margin-top: 20px;
 }

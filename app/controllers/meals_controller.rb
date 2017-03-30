@@ -3,19 +3,22 @@ class MealsController < ApplicationController
     @user = current_user
     @user_subscription = UserSubscription.where(user_id: @user.id)
 
-    # on verifie si l'utilisateur a une subscription sinon on le redirige vers le paiement
+    # We check if the user has a subscription otherwise it is redirected towards the payment
     if @user_subscription.empty?
       redirect_to new_user_subscription_path
     end
 
-    # en provenance du search-bar : meals_path
-
-    # favourite_category_id : preference
-    # favourite_category_id : search
-    # favourite_category_id : pas de sélection dans les 2 cas
+      # We check if it's a search or not
     if params[:search].nil? || params[:search][:favorite_category_ids] == [""]
+
+      # We check the favorite_category from the current user
       favorite_category_ids = current_user.favorite_categories.pluck(:id)
+      if favorite_category_ids.empty?
+        @today_meals = Meal.for_today
+      else
       @today_meals = Meal.for_today.where(category_id: favorite_category_ids)
+      end
+
     else
       #  delete first empty element from favorite_category_ids
       favorite_category_ids = params[:search][:favorite_category_ids]
@@ -32,7 +35,7 @@ class MealsController < ApplicationController
     @meal_reserved = current_user.order_made_today
 
 
-    ########### AFFICHAGE DE L'ENSEMBLE DES PLATS DU JOUR #############
+    ########### DISPLAY OF ALL MEALS OF DAYS #############
     if @meal_reserved == nil
       #  marker restaurant
       @hash = Gmaps4rails.build_markers(@today_meals) do |meal, marker,info|
@@ -59,7 +62,7 @@ class MealsController < ApplicationController
     end
 
 
-    ########### AFFICHAGE DU PLAT DU JOUR #############
+    ########### DISPLAY TODAY'S MEALS #############
 
     unless @meal_reserved.nil?
       #  marker restaurant

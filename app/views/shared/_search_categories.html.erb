@@ -1,0 +1,20 @@
+<%= simple_form_for current_user, as: :search, url: meals_path, method: :get do |f| %>
+<ul class="collapsible" data-collapsible="accordion" style="width: 98%;     margin-left: 1%;background-color: white;">
+
+  <li>
+    <div class="collapsible-header" style="height: 84px; margin-top: 0.5%;"><%= cl_image_tag("static-mesmidis/marker-user.png", height: 32) %>
+
+<input id="address_work" type="text" class="validate" placeholder="<%= current_user.address_work %>">
+      <!-- <label class="active" for="address_work">Vous mangez où ?</label> -->
+      <span class="right hide-on-small-only" style="position:relative; padding-top: 1%; padding-right: 12%;"><i class="material-icons">keyboard_arrow_down</i> FILTRER </span>
+    </div>
+    <div class="collapsible-body">
+      <div class="filter-flex">
+      <%= f.association :favorite_categories, as: :check_boxes, style: "padding-left: 28px;" %>
+      <div class="filter-flex-button text-center"> <%= f.button :submit, 'Filtrer mes plats', class:"btn waves-effect waves-light btn" %></div></div>
+    </div>
+  </li>
+
+</ul>
+
+<% end %>

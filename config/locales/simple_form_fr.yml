@@ -11,9 +11,12 @@ fr:
     error_notification:
       default_message: "Merci de vérifier vos informations ci-dessous :"
     # Examples
-      labels:
-        defaults: ''
-        address_work: 'dans i18n'
+
+    label:
+      defaults: ''
+      address_work: 'adresse du midi'
+      favorite_categories: 'test'
+
     #     password: 'Password'
     #   user:
     #     new:
