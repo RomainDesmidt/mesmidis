@@ -14,8 +14,16 @@
         <p class="uppercase name">adresse : <%= @meal_reserved.meal.restaurant.address %> - <%= @meal_reserved.meal.restaurant.city.capitalize %></p>
         <p class="uppercase name">à emporter : <%= @meal_reserved.time_slot %></p>
       <div  class="divider"></div>
-        <p id= "informations" class="uppercase distance"><%= image_tag "man.png", class: "icon-trajet" %><%= @distance %><%= image_tag "schedule.png", class: "icon-trajet" %><%= @duration  %></p>
-      <div class="divider"></div>
+      <div class="informations">
+        <div class="uppercase distance">
+          <%= image_tag "man.png", class: "icon-trajet" %>
+          <p class="text-distance"><%= @distance %></p>
+        </div>
+        <div class="uppercase duration">
+          <%= image_tag "schedule.png", class: "icon-trajet" %>
+          <p class="text-duration"><%= @duration %></p>
+        </div>
+      </div>
 </div>
 <div class="card-bottom-restaurant">
 
