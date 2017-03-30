@@ -15,9 +15,9 @@ Subscription.destroy_all
 puts "Creating subscriptions..."
 
 
-Subscription.create!(price: 30, meals_count:5, name:"L'avant-goût", description: "Découvrez mes midis pendant une semaine")
-Subscription.create!(price: 79, meals_count: 12, name: "Le Sublime", description: "Vous donne droit à 12 repas au cours du mois")
-Subscription.create!(price: 119, meals_count: 20, name: "Le Gargantuesque", description: "Vous donne droit à 20 repas au cours du mois")
+Subscription.create!(price: 30, meals_count:5, name:"L'avant-goût", description: "Découvrez MesMidis en 5 repas,\nle savourer c'est l'adopter.")
+Subscription.create!(price: 79, meals_count: 12, name: "Le Sublime", description: "Faîtes-vous plaisir en dégustant 3 repas MesMidis par semaine pendant 30 jours.")
+Subscription.create!(price: 119, meals_count: 20, name: "Le Gargantuesque", description: "Piquez par MesMidis, offrez-vous tous vos repas du lundi au vendredi pendant 30 jours.")
 
 
 

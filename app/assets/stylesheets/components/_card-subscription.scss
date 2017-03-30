@@ -21,23 +21,36 @@
 }
 
 .subscription-price {
-  color: white;
+
   border-radius: 4px;
   display: flex;
   align-item: center;
   justify-content: center;
+  h4 {
+    letter-spacing: 3px;
+  }
 }
 
 .subscription-description {
   padding: 10px;
+  p {
+    text-align: center;
+  }
+  img {
+    width: 30px;
+  }
+  .meal {
+    color: $brand-color;
+    margin-top: 5%;
+  }
 }
-
-.subscription-description img {
-  width: 30px;
-}
-
 .stripe_payment {
   text-align: center;
   margin-top: 20px;
+  input {
+    width: 120px;
+    letter-spacing: 3px;
+  }
 }
+
 
