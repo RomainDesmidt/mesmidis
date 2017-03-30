@@ -6,5 +6,6 @@
 //= require gmaps/google
 //= require sweetalert2
 //= require sweet-alert2-rails
+//= require underscore
 //= require_tree .
 

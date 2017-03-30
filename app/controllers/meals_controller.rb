@@ -42,12 +42,15 @@ class MealsController < ApplicationController
         marker.lat meal.restaurant.latitude
         marker.lng meal.restaurant.longitude
         marker.infowindow "#{meal.restaurant.name}"
+        marker.json({ :id => meal.restaurant.id })
         marker.picture({
                          url: "http://res.cloudinary.com/mesmidis/image/upload/v1490694579/static-mesmidis/marker-restaurant.png",
                          width: 48,
                          height: 48,
         })
-      end
+    end
+
+
       #  marker user
       @hash += Gmaps4rails.build_markers(@user) do |meal, marker,info|
         marker.lat @user.latitude

@@ -13,6 +13,21 @@
         } else if (markers.length == 1) {
           handler.getMap().setZoom(14);
         }
+
+
+
+$(".card-meal").on("mouseover", function() {
+      for (i = 0; i < markers.length; i++) {
+    markers[id].serviceObject.setIcon ("http://res.cloudinary.com/mesmidis/image/upload/v1490694964/static-mesmidis/marker-user.png");
+    }});
+
+
+
+
+
+
+
+
       });
     });
   <% end %>
